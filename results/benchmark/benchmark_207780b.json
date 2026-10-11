@@ -1,0 +1,2107 @@
+{
+  "record": {
+    "config_version": "v0.2.1",
+    "git_commit": "207780b",
+    "git_dirty": false,
+    "timestamp": "2026-07-16T22:21:00",
+    "season_days": 60,
+    "smoke": false,
+    "grid": {
+      "seasons": 144,
+      "arms": [
+        "incumbent",
+        "black_box",
+        "physics_mpc",
+        "physics_informed"
+      ]
+    },
+    "n_failed_seasons": 1,
+    "failed_seasons": [
+      {
+        "arm": "physics_informed",
+        "label": "2022/m0.10",
+        "seed": 1,
+        "error": "RuntimeError: Error in Function::call for 'F' [CvodesInterface] at .../casadi/core/function.cpp:1432:"
+      }
+    ],
+    "hardware": {
+      "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+      "processor": "x86_64",
+      "cpu_count": 22,
+      "python": "3.12.3"
+    }
+  },
+  "arms": {
+    "black_box": {
+      "net_value_mean": 3.4998486761825722,
+      "net_value_std": 1.9242374532758126,
+      "n_seasons": 20,
+      "n_failed": 0,
+      "online_cost_seconds": 0.001854365369506544,
+      "gate_humidity": false,
+      "gate_underpowered": true,
+      "solve_success": null
+    },
+    "incumbent": {
+      "net_value_mean": -2.7416502769852698,
+      "net_value_std": 5.411037927595628,
+      "n_seasons": 4,
+      "n_failed": 0,
+      "online_cost_seconds": 0.00020965929087863306,
+      "gate_humidity": false,
+      "gate_underpowered": true,
+      "solve_success": null
+    },
+    "physics_informed": {
+      "net_value_mean": 3.534237779350334,
+      "net_value_std": 1.941683430801628,
+      "n_seasons": 59,
+      "n_failed": 1,
+      "online_cost_seconds": 0.43673758312246624,
+      "gate_humidity": false,
+      "gate_underpowered": false,
+      "solve_success": 0.994972035810638
+    },
+    "physics_mpc": {
+      "net_value_mean": -3.5002820777721317,
+      "net_value_std": 1.9120620402970456,
+      "n_seasons": 60,
+      "n_failed": 0,
+      "online_cost_seconds": 0.339454111756366,
+      "gate_humidity": false,
+      "gate_underpowered": false,
+      "solve_success": 0.9986055661632819
+    }
+  },
+  "seasons": [
+    {
+      "arm": "black_box",
+      "label": "2022/m0.00",
+      "seed": 0,
+      "net": 5.451683946340115,
+      "online_cost_seconds": 0.00177733648763879,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2022/m0.00",
+      "seed": 1,
+      "net": 5.1922276282227084,
+      "online_cost_seconds": 0.0018429756371374391,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2022/m0.00",
+      "seed": 2,
+      "net": 4.825359177442364,
+      "online_cost_seconds": 0.0016221950189980784,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2022/m0.00",
+      "seed": 3,
+      "net": 4.903831601319327,
+      "online_cost_seconds": 0.001788338810367362,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2022/m0.00",
+      "seed": 4,
+      "net": 5.0043192865384585,
+      "online_cost_seconds": 0.001559150981343539,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2023/m0.00",
+      "seed": 0,
+      "net": 1.4005416416075214,
+      "online_cost_seconds": 0.001687052866564509,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2023/m0.00",
+      "seed": 1,
+      "net": 1.2679253825932584,
+      "online_cost_seconds": 0.0016312571390370459,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2023/m0.00",
+      "seed": 2,
+      "net": 0.8724814753098364,
+      "online_cost_seconds": 0.0018510069349051432,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2023/m0.00",
+      "seed": 3,
+      "net": 0.9108992833066818,
+      "online_cost_seconds": 0.001974751139740251,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2023/m0.00",
+      "seed": 4,
+      "net": 0.987886804443125,
+      "online_cost_seconds": 0.002038202448850706,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2024/m0.00",
+      "seed": 0,
+      "net": 2.4237784174727803,
+      "online_cost_seconds": 0.0017010432423741975,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2024/m0.00",
+      "seed": 1,
+      "net": 2.5080663727458035,
+      "online_cost_seconds": 0.0018629690381974588,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2024/m0.00",
+      "seed": 2,
+      "net": 1.9292013708814757,
+      "online_cost_seconds": 0.0018183476670648895,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2024/m0.00",
+      "seed": 3,
+      "net": 2.0041101865481465,
+      "online_cost_seconds": 0.0019172990686134716,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2024/m0.00",
+      "seed": 4,
+      "net": 2.0839791508597276,
+      "online_cost_seconds": 0.0016344235497472669,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2025/m0.00",
+      "seed": 0,
+      "net": 5.851896665849222,
+      "online_cost_seconds": 0.0013195604775280388,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2025/m0.00",
+      "seed": 1,
+      "net": 5.891485216880511,
+      "online_cost_seconds": 0.0022283204756475884,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2025/m0.00",
+      "seed": 2,
+      "net": 5.4273213101230855,
+      "online_cost_seconds": 0.002515696030436027,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2025/m0.00",
+      "seed": 3,
+      "net": 5.421341941174609,
+      "online_cost_seconds": 0.002221505080840866,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "black_box",
+      "label": "2025/m0.00",
+      "seed": 4,
+      "net": 5.638636663992694,
+      "online_cost_seconds": 0.002095875295098209,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "incumbent",
+      "label": "2022/m0.00",
+      "seed": 0,
+      "net": 2.044325875964997,
+      "online_cost_seconds": 0.0002012994773426468,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "incumbent",
+      "label": "2023/m0.00",
+      "seed": 0,
+      "net": -9.444210990371449,
+      "online_cost_seconds": 0.00021737363724795542,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "incumbent",
+      "label": "2024/m0.00",
+      "seed": 0,
+      "net": -6.654230083654138,
+      "online_cost_seconds": 0.0002160393853816211,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "incumbent",
+      "label": "2025/m0.00",
+      "seed": 0,
+      "net": 3.0875140901195106,
+      "online_cost_seconds": 0.00020392466354230896,
+      "solve_success": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.00",
+      "seed": 0,
+      "net": 5.52865909212995,
+      "online_cost_seconds": 0.48711474774343483,
+      "solve_success": 0.9965283804894983,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.00",
+      "seed": 1,
+      "net": 5.28038520210537,
+      "online_cost_seconds": 0.48848695804796327,
+      "solve_success": 0.995834056587398,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.00",
+      "seed": 2,
+      "net": 4.976376116902019,
+      "online_cost_seconds": 0.4690823963290874,
+      "solve_success": 0.9994792570734248,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.00",
+      "seed": 3,
+      "net": 4.9863644230467585,
+      "online_cost_seconds": 0.4847903531231843,
+      "solve_success": 0.9980906092692241,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.00",
+      "seed": 4,
+      "net": 5.089942211212293,
+      "online_cost_seconds": 0.4796608518939924,
+      "solve_success": 0.9982641902447492,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.05",
+      "seed": 0,
+      "net": 5.52353249746121,
+      "online_cost_seconds": 0.4882518688572033,
+      "solve_success": 0.9946189897587224,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.05",
+      "seed": 1,
+      "net": 5.217409656956067,
+      "online_cost_seconds": 0.4659204888968776,
+      "solve_success": 0.9909737892726957,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.05",
+      "seed": 2,
+      "net": 5.122402735655917,
+      "online_cost_seconds": 0.5933366271090582,
+      "solve_success": 0.9996528380489499,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.05",
+      "seed": 3,
+      "net": 4.951879630186592,
+      "online_cost_seconds": 0.4682388544995454,
+      "solve_success": 0.9965283804894983,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.05",
+      "seed": 4,
+      "net": 5.0681474578072425,
+      "online_cost_seconds": 0.45435885437667434,
+      "solve_success": 0.9977434473181739,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.10",
+      "seed": 0,
+      "net": 5.499759374689424,
+      "online_cost_seconds": 0.4908972270415551,
+      "solve_success": 0.9859399409824683,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.10",
+      "seed": 2,
+      "net": 4.974054627779828,
+      "online_cost_seconds": 0.8771349649061874,
+      "solve_success": 0.9993056760978997,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.10",
+      "seed": 3,
+      "net": 4.951632111050969,
+      "online_cost_seconds": 0.4471709359147715,
+      "solve_success": 0.9781287970838396,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2022/m0.10",
+      "seed": 4,
+      "net": 5.068047042310202,
+      "online_cost_seconds": 0.4261102003035054,
+      "solve_success": 0.9991320951223746,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.00",
+      "seed": 0,
+      "net": 1.4363550068419269,
+      "online_cost_seconds": 0.47460892324381665,
+      "solve_success": 0.9961812185384482,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.00",
+      "seed": 1,
+      "net": 1.312312977884151,
+      "online_cost_seconds": 0.4341442071464799,
+      "solve_success": 0.9982641902447492,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.00",
+      "seed": 2,
+      "net": 0.975835890802017,
+      "online_cost_seconds": 0.39469589158847607,
+      "solve_success": 0.9982641902447492,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.00",
+      "seed": 3,
+      "net": 0.9618734912047842,
+      "online_cost_seconds": 0.42956810493038855,
+      "solve_success": 0.9973962853671238,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.00",
+      "seed": 4,
+      "net": 1.048837438834969,
+      "online_cost_seconds": 0.4172123250029623,
+      "solve_success": 0.9953133136608228,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.05",
+      "seed": 0,
+      "net": 1.4341190392727334,
+      "online_cost_seconds": 0.43894850895492143,
+      "solve_success": 0.9949661517097727,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.05",
+      "seed": 1,
+      "net": 1.2163409911802816,
+      "online_cost_seconds": 0.3951161375594715,
+      "solve_success": 0.9921888561013713,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.05",
+      "seed": 2,
+      "net": 0.9818532607859751,
+      "online_cost_seconds": 0.5019899774173537,
+      "solve_success": 0.9998264190244749,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.05",
+      "seed": 3,
+      "net": 0.9402664181726301,
+      "online_cost_seconds": 0.3871806245550595,
+      "solve_success": 0.995660475611873,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.05",
+      "seed": 4,
+      "net": 1.0171966428150228,
+      "online_cost_seconds": 0.39582381113670595,
+      "solve_success": 0.9984377712202742,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.10",
+      "seed": 0,
+      "net": 1.4342115115469358,
+      "online_cost_seconds": 0.4307261170391953,
+      "solve_success": 0.9892379795174449,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.10",
+      "seed": 1,
+      "net": 1.1920479978695173,
+      "online_cost_seconds": 0.3886120100874942,
+      "solve_success": 0.9805589307411907,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.10",
+      "seed": 2,
+      "net": 1.0890088536789904,
+      "online_cost_seconds": 0.8106563037453318,
+      "solve_success": 0.9980906092692241,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.10",
+      "seed": 3,
+      "net": 0.9405247334430804,
+      "online_cost_seconds": 0.3957878681707493,
+      "solve_success": 0.9763929873285888,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2023/m0.10",
+      "seed": 4,
+      "net": 1.0137937175620095,
+      "online_cost_seconds": 0.39284140893762615,
+      "solve_success": 0.9975698663426489,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.00",
+      "seed": 0,
+      "net": 2.4667298133866655,
+      "online_cost_seconds": 0.430524534016231,
+      "solve_success": 0.9980906092692241,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.00",
+      "seed": 1,
+      "net": 2.5773683849269684,
+      "online_cost_seconds": 0.4092344565030715,
+      "solve_success": 0.9977434473181739,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.00",
+      "seed": 2,
+      "net": 2.049256959165744,
+      "online_cost_seconds": 0.3934860413328975,
+      "solve_success": 0.9994792570734248,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.00",
+      "seed": 3,
+      "net": 2.076638635789376,
+      "online_cost_seconds": 0.4031242563184762,
+      "solve_success": 0.9994792570734248,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.00",
+      "seed": 4,
+      "net": 2.148413932562736,
+      "online_cost_seconds": 0.40448562601206,
+      "solve_success": 0.9989585141468496,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.05",
+      "seed": 0,
+      "net": 2.4613321118014966,
+      "online_cost_seconds": 0.4322932051907698,
+      "solve_success": 0.9967019614650234,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.05",
+      "seed": 1,
+      "net": 2.4641509118760183,
+      "online_cost_seconds": 0.40433532533094924,
+      "solve_success": 0.9953133136608228,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.05",
+      "seed": 2,
+      "net": 2.080520821473703,
+      "online_cost_seconds": 0.5024499226073414,
+      "solve_success": 0.9998264190244749,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.05",
+      "seed": 3,
+      "net": 2.044251256912421,
+      "online_cost_seconds": 0.3918204392064967,
+      "solve_success": 0.9975698663426489,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.05",
+      "seed": 4,
+      "net": 2.1178272746812485,
+      "online_cost_seconds": 0.39435330364300913,
+      "solve_success": 0.9984377712202742,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.10",
+      "seed": 0,
+      "net": 2.4630734004084793,
+      "online_cost_seconds": 0.4259830311197095,
+      "solve_success": 0.9918416941503211,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.10",
+      "seed": 1,
+      "net": 2.3931923200087475,
+      "online_cost_seconds": 0.4036546193841227,
+      "solve_success": 0.9902794653705954,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.10",
+      "seed": 2,
+      "net": 2.030579787596391,
+      "online_cost_seconds": 0.6138015039041419,
+      "solve_success": 0.9998264190244749,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.10",
+      "seed": 3,
+      "net": 2.042248425643093,
+      "online_cost_seconds": 0.4048215783350047,
+      "solve_success": 0.9895851414684951,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2024/m0.10",
+      "seed": 4,
+      "net": 2.1203746225006164,
+      "online_cost_seconds": 0.384465807969439,
+      "solve_success": 0.9994792570734248,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.00",
+      "seed": 0,
+      "net": 5.922148638622263,
+      "online_cost_seconds": 0.4362826087119788,
+      "solve_success": 0.9968755424405485,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.00",
+      "seed": 1,
+      "net": 5.975299963725267,
+      "online_cost_seconds": 0.41687969385734064,
+      "solve_success": 0.9970491234160735,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.00",
+      "seed": 2,
+      "net": 5.579574649854127,
+      "online_cost_seconds": 0.4014122754415748,
+      "solve_success": 0.9986113521957993,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.00",
+      "seed": 3,
+      "net": 5.492723589475452,
+      "online_cost_seconds": 0.41819455402845185,
+      "solve_success": 0.9980906092692241,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.00",
+      "seed": 4,
+      "net": 5.72100884216848,
+      "online_cost_seconds": 0.4159266949927152,
+      "solve_success": 0.9977434473181739,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.05",
+      "seed": 0,
+      "net": 5.915739250558788,
+      "online_cost_seconds": 0.42021917372120454,
+      "solve_success": 0.9923624370768964,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.05",
+      "seed": 1,
+      "net": 5.905697456851607,
+      "online_cost_seconds": 0.3953605648880179,
+      "solve_success": 0.993577503905572,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.05",
+      "seed": 2,
+      "net": 5.582239189657634,
+      "online_cost_seconds": 0.4560665327483667,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.05",
+      "seed": 3,
+      "net": 5.454514302159759,
+      "online_cost_seconds": 0.36370917169181277,
+      "solve_success": 0.9954868946363479,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.05",
+      "seed": 4,
+      "net": 5.7093525137315595,
+      "online_cost_seconds": 0.33287666166588853,
+      "solve_success": 0.997917028293699,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.10",
+      "seed": 0,
+      "net": 5.912514426982055,
+      "online_cost_seconds": 0.34035022908250556,
+      "solve_success": 0.9805589307411907,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.10",
+      "seed": 1,
+      "net": 5.882526301192849,
+      "online_cost_seconds": 0.30595407322246526,
+      "solve_success": 0.9848984551293178,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.10",
+      "seed": 2,
+      "net": 5.562250656427801,
+      "online_cost_seconds": 0.41440089712334044,
+      "solve_success": 0.9996528380489499,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.10",
+      "seed": 3,
+      "net": 5.43603527725208,
+      "online_cost_seconds": 0.2328181860615466,
+      "solve_success": 0.9835098073251172,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_informed",
+      "label": "2025/m0.10",
+      "seed": 4,
+      "net": 5.699275113087414,
+      "online_cost_seconds": 0.2097648875555064,
+      "solve_success": 0.995834056587398,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.00",
+      "seed": 0,
+      "net": -3.0466534798921785,
+      "online_cost_seconds": 0.32981865148505923,
+      "solve_success": 0.9989585141468496,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.00",
+      "seed": 1,
+      "net": -3.0466534798921785,
+      "online_cost_seconds": 0.3294547352697516,
+      "solve_success": 0.9989585141468496,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.00",
+      "seed": 2,
+      "net": -3.0466534798921785,
+      "online_cost_seconds": 0.32740014649129945,
+      "solve_success": 0.9989585141468496,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.00",
+      "seed": 3,
+      "net": -3.0466534798921785,
+      "online_cost_seconds": 0.32747025752690545,
+      "solve_success": 0.9989585141468496,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.00",
+      "seed": 4,
+      "net": -3.0466534798921785,
+      "online_cost_seconds": 0.3202907236628928,
+      "solve_success": 0.9989585141468496,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.05",
+      "seed": 0,
+      "net": -3.551075085411709,
+      "online_cost_seconds": 0.32044592589935145,
+      "solve_success": 0.9994792570734248,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.05",
+      "seed": 1,
+      "net": -2.6177081161748745,
+      "online_cost_seconds": 0.3180089361063372,
+      "solve_success": 0.9970491234160735,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.05",
+      "seed": 2,
+      "net": -0.017088081458949134,
+      "online_cost_seconds": 0.4045318213040166,
+      "solve_success": 0.9989585141468496,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.05",
+      "seed": 3,
+      "net": -4.513181680052572,
+      "online_cost_seconds": 0.3046354810488667,
+      "solve_success": 0.9984377712202742,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.05",
+      "seed": 4,
+      "net": -2.474379433951052,
+      "online_cost_seconds": 0.32729789649434304,
+      "solve_success": 0.9994792570734248,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.10",
+      "seed": 0,
+      "net": -4.338291942843465,
+      "online_cost_seconds": 0.36392092772001233,
+      "solve_success": 0.9991320951223746,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.10",
+      "seed": 1,
+      "net": -2.6516930574962547,
+      "online_cost_seconds": 0.33838392954366475,
+      "solve_success": 0.993577503905572,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.10",
+      "seed": 2,
+      "net": 0.7787068121766518,
+      "online_cost_seconds": 0.6230392344945346,
+      "solve_success": 0.9967019614650234,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.10",
+      "seed": 3,
+      "net": -4.948504863218572,
+      "online_cost_seconds": 0.31657991807752545,
+      "solve_success": 0.9986113521957993,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2022/m0.10",
+      "seed": 4,
+      "net": -2.938289130280742,
+      "online_cost_seconds": 0.3318071282312775,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.00",
+      "seed": 0,
+      "net": -3.925836157977221,
+      "online_cost_seconds": 0.3185204846753636,
+      "solve_success": 0.9963547995139733,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.00",
+      "seed": 1,
+      "net": -3.925836157977221,
+      "online_cost_seconds": 0.32774017264080096,
+      "solve_success": 0.9963547995139733,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.00",
+      "seed": 2,
+      "net": -3.925836157977221,
+      "online_cost_seconds": 0.31460500931126767,
+      "solve_success": 0.9963547995139733,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.00",
+      "seed": 3,
+      "net": -3.925836157977221,
+      "online_cost_seconds": 0.31369811119183755,
+      "solve_success": 0.9963547995139733,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.00",
+      "seed": 4,
+      "net": -3.925836157977221,
+      "online_cost_seconds": 0.3193837926579832,
+      "solve_success": 0.9963547995139733,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.05",
+      "seed": 0,
+      "net": -5.865674855122187,
+      "online_cost_seconds": 0.32465451953548213,
+      "solve_success": 0.9994792570734248,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.05",
+      "seed": 1,
+      "net": -4.8247205610219766,
+      "online_cost_seconds": 0.322475764838702,
+      "solve_success": 0.9951397326852977,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.05",
+      "seed": 2,
+      "net": -2.463637761903591,
+      "online_cost_seconds": 0.3589450204354324,
+      "solve_success": 0.9972227043915987,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.05",
+      "seed": 3,
+      "net": -6.580642235344323,
+      "online_cost_seconds": 0.28170045832237267,
+      "solve_success": 0.9994792570734248,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.05",
+      "seed": 4,
+      "net": -5.300337520508526,
+      "online_cost_seconds": 0.32421091936452984,
+      "solve_success": 0.9993056760978997,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.10",
+      "seed": 0,
+      "net": -7.485592710758188,
+      "online_cost_seconds": 0.3431721647207825,
+      "solve_success": 0.9980906092692241,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.10",
+      "seed": 1,
+      "net": -4.969383629170137,
+      "online_cost_seconds": 0.3321754979860843,
+      "solve_success": 0.9923624370768964,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.10",
+      "seed": 2,
+      "net": -1.134637736628231,
+      "online_cost_seconds": 0.5923026402801209,
+      "solve_success": 0.9980906092692241,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.10",
+      "seed": 3,
+      "net": -7.433381792063331,
+      "online_cost_seconds": 0.2990566955253424,
+      "solve_success": 0.9984377712202742,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2023/m0.10",
+      "seed": 4,
+      "net": -6.671703888672228,
+      "online_cost_seconds": 0.33085141606461216,
+      "solve_success": 0.9991320951223746,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.00",
+      "seed": 0,
+      "net": -3.6568530071992704,
+      "online_cost_seconds": 0.30200573098077693,
+      "solve_success": 0.9996528380489499,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.00",
+      "seed": 1,
+      "net": -3.6568530071992704,
+      "online_cost_seconds": 0.28672689323855016,
+      "solve_success": 0.9996528380489499,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.00",
+      "seed": 2,
+      "net": -3.6568530071992704,
+      "online_cost_seconds": 0.2917979645808105,
+      "solve_success": 0.9996528380489499,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.00",
+      "seed": 3,
+      "net": -3.6568530071992704,
+      "online_cost_seconds": 0.30470019503611323,
+      "solve_success": 0.9996528380489499,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.00",
+      "seed": 4,
+      "net": -3.6568530071992704,
+      "online_cost_seconds": 0.30528817227279564,
+      "solve_success": 0.9996528380489499,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.05",
+      "seed": 0,
+      "net": -5.548589499731664,
+      "online_cost_seconds": 0.30548733894344154,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.05",
+      "seed": 1,
+      "net": -3.856303949925401,
+      "online_cost_seconds": 0.29965739273277026,
+      "solve_success": 0.9991320951223746,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.05",
+      "seed": 2,
+      "net": -1.9783113020148608,
+      "online_cost_seconds": 0.35267851881019985,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.05",
+      "seed": 3,
+      "net": -5.71191464495644,
+      "online_cost_seconds": 0.27248178362011444,
+      "solve_success": 0.9998264190244749,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.05",
+      "seed": 4,
+      "net": -4.3279005695012005,
+      "online_cost_seconds": 0.2960737257015821,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.10",
+      "seed": 0,
+      "net": -6.52412609982057,
+      "online_cost_seconds": 0.34172277250502164,
+      "solve_success": 0.9994792570734248,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.10",
+      "seed": 1,
+      "net": -5.1139764025895795,
+      "online_cost_seconds": 0.29680361263147415,
+      "solve_success": 0.9980906092692241,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.10",
+      "seed": 2,
+      "net": -1.4738863924109262,
+      "online_cost_seconds": 0.543544801736097,
+      "solve_success": 0.9984377712202742,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.10",
+      "seed": 3,
+      "net": -7.515329728839031,
+      "online_cost_seconds": 0.293764692302712,
+      "solve_success": 0.9989585141468496,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2024/m0.10",
+      "seed": 4,
+      "net": -5.660981406118212,
+      "online_cost_seconds": 0.321262695184184,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.00",
+      "seed": 0,
+      "net": -1.6076154242219172,
+      "online_cost_seconds": 0.32778728235345816,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.00",
+      "seed": 1,
+      "net": -1.6076154242219172,
+      "online_cost_seconds": 0.32506006881825833,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.00",
+      "seed": 2,
+      "net": -1.6076154242219172,
+      "online_cost_seconds": 0.31321479615732867,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.00",
+      "seed": 3,
+      "net": -1.6076154242219172,
+      "online_cost_seconds": 0.32590242899826444,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.00",
+      "seed": 4,
+      "net": -1.6076154242219172,
+      "online_cost_seconds": 0.3113858669693372,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.05",
+      "seed": 0,
+      "net": -3.0466061662859296,
+      "online_cost_seconds": 0.3310735501512188,
+      "solve_success": 1.0,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.05",
+      "seed": 1,
+      "net": -2.0895682878225372,
+      "online_cost_seconds": 0.31068852670080166,
+      "solve_success": 0.9989585141468496,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.05",
+      "seed": 2,
+      "net": 0.8859677051603807,
+      "online_cost_seconds": 0.3794908309860969,
+      "solve_success": 0.9993056760978997,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.05",
+      "seed": 3,
+      "net": -3.1647849808758064,
+      "online_cost_seconds": 0.2954567709260721,
+      "solve_success": 0.9986113521957993,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.05",
+      "seed": 4,
+      "net": -1.6769453726644379,
+      "online_cost_seconds": 0.3278484704768242,
+      "solve_success": 0.9996528380489499,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.10",
+      "seed": 0,
+      "net": -3.5779998303831064,
+      "online_cost_seconds": 0.35399632135556397,
+      "solve_success": 0.9989585141468496,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.10",
+      "seed": 1,
+      "net": -2.5212697008476823,
+      "online_cost_seconds": 0.3056320712046148,
+      "solve_success": 0.9972227043915987,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.10",
+      "seed": 2,
+      "net": 0.5843688318169402,
+      "online_cost_seconds": 0.5741834560687404,
+      "solve_success": 0.9991320951223746,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.10",
+      "seed": 3,
+      "net": -3.7242364089470055,
+      "online_cost_seconds": 0.34245489374497023,
+      "solve_success": 0.9984377712202742,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    },
+    {
+      "arm": "physics_mpc",
+      "label": "2025/m0.10",
+      "seed": 4,
+      "net": -2.788522843213592,
+      "online_cost_seconds": 0.34249669928721427,
+      "solve_success": 0.9991320951223746,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      }
+    }
+  ],
+  "pareto": {
+    "arms": [
+      "incumbent"
+    ],
+    "non_dominated": [
+      "incumbent"
+    ],
+    "hypervolume": 0.0,
+    "reference": "incumbent",
+    "gated": true
+  },
+  "pareto_ungated_diagnostic": {
+    "arms": [
+      "black_box",
+      "incumbent",
+      "physics_informed",
+      "physics_mpc"
+    ],
+    "non_dominated": [
+      "black_box",
+      "incumbent",
+      "physics_informed"
+    ],
+    "hypervolume": 0.0,
+    "reference": "incumbent",
+    "gated": false
+  }
+}

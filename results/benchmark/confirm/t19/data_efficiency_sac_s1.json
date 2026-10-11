@@ -1,0 +1,33 @@
+{
+  "seed": 1,
+  "algo": "sac",
+  "config": "winner(t19)",
+  "device": "mps",
+  "location": "Amsterdam_OM",
+  "curve": {
+    "50000": {
+      "heldout_net": -35.474,
+      "actual_steps": 50000
+    },
+    "100000": {
+      "heldout_net": 0.526,
+      "actual_steps": 100000
+    },
+    "200000": {
+      "heldout_net": 1.57,
+      "actual_steps": 200000
+    },
+    "400000": {
+      "heldout_net": 2.053,
+      "actual_steps": 400000
+    },
+    "1000000": {
+      "heldout_net": 2.877,
+      "actual_steps": 1000000
+    },
+    "2000000": {
+      "heldout_net": 3.223,
+      "actual_steps": 2000000
+    }
+  }
+}

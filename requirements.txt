@@ -1,0 +1,4 @@
+# The dependency SPEC lives in pyproject.toml; the frozen resolve of the machine
+# that ran the valid grid lives in requirements.lock.txt (platform-specific).
+# This file only points at the lock so the three can never drift apart.
+-r requirements.lock.txt

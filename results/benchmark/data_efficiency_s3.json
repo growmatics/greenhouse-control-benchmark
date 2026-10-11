@@ -1,0 +1,31 @@
+{
+  "seed": 3,
+  "location": "Amsterdam_OM",
+  "recipe": "glg2-reference",
+  "curve": {
+    "50000": {
+      "heldout_net": -15.917439653275544,
+      "actual_steps": 65536
+    },
+    "100000": {
+      "heldout_net": -16.887027613282317,
+      "actual_steps": 114688
+    },
+    "200000": {
+      "heldout_net": -8.965017462511774,
+      "actual_steps": 212992
+    },
+    "400000": {
+      "heldout_net": -1.041261403428234,
+      "actual_steps": 409600
+    },
+    "1000000": {
+      "heldout_net": 2.7672740432723923,
+      "actual_steps": 1015808
+    },
+    "2000000": {
+      "heldout_net": 3.3100457530871914,
+      "actual_steps": 2015232
+    }
+  }
+}

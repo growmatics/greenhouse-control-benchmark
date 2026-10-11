@@ -1,0 +1,2 @@
+{"trial": 0, "config": {"learning_rate": 0.00018789852661499484, "n_envs": 4, "train_freq": 8, "gradient_steps": 4, "tau": 0.0051158833394086625}, "val_net": 1.8728420316449306, "actual_steps": 1000000, "checkpoint": "sac_tune_t00.zip", "recovered": true}
+{"trial": 20, "config": {"learning_rate": 0.00018122424665646287, "n_envs": 8, "train_freq": 50, "gradient_steps": 4, "tau": 0.018779790740059928}, "val_net": -16.93874804983883, "actual_steps": 1000000, "checkpoint": "sac_tune_t20.zip", "recovered": true}

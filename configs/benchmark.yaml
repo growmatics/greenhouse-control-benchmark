@@ -1,0 +1,134 @@
+# ============================================================================
+# SINGLE SOURCE OF TRUTH for the benchmark paper's benchmark constants ("global variables").
+#
+# Rule: every constant below is defined ONCE here. Code imports from this file;
+# it must contain NO hardcoded magic numbers for anything defined here. Prose
+# (experiments/setup.md, method/design.md, the manuscript) states these values
+# once and points here as canonical. If a value changes, it changes HERE, and
+# the change is logged in the project decision record. The conformance checks cover
+# prose against this file.
+# ============================================================================
+
+testbed:
+  name: GreenLight-Gym2
+  repo: https://github.com/BartvLaatum/GreenLight-Gym2
+  release: v0.2.1            # 2025-08-18; confirm exact commit hash on install
+  env_id: GreenLightTomato-v0
+  license: AGPL-3.0
+  python: ">=3.11"
+  crop: tomato              # single-crop; generalisation is NOT across crop
+
+episode:
+  crop_days: 60
+  steps: 5760
+  timestep_seconds: 900
+
+controllers:                # the four comparators (contract row 1)
+  incumbent: rule-based setpoint (Het Nieuwe Telen / temperature integration); requires a documented competence standard
+  blackbox_rl: PPO and/or SAC on the native reward (Stable-Baselines3)
+  physics_only: economic MPC on the GreenLight equations (no learned part)
+  physics_informed: van Laatum RL-in-MPC (economic MPC + RL-learned terminal cost), reused-not-reinvented
+
+objective:
+  ranking: net_economic_value        # revenue minus energy and resource cost (NOT energy alone)
+  violations_handling: feasibility_gate   # native reward penalty is REMOVED from the objective and moved to the gate
+
+constraints:                # repo defaults; classes drive the gate
+  co2_ppm: [300, 1600]      # class: physical
+  air_temp_c: [15, 34]      # class: physical
+  rh_percent: [50, 85]      # ceiling (85) -> soft crop-health (disease proxy)
+  hard_equipment: actuator [-1,1] saturation; lamp-after-20:00 rule   # class: hard, zero-tolerance
+
+gate:                       # season-level feasibility gate (contract rows 7, 7b)
+  trial_unit: season        # NOT timestep (autocorrelated)
+  epsilon: 0.05             # soft-bound season-level violation tolerance
+  delta: 0.05               # confidence (95%)
+  method: clopper_pearson_one_sided_upper
+  n_seasons_min: 60         # rule of three ~ 3/epsilon; exact ceil(ln delta / ln(1-eps)) = 59
+  hard_classes: zero_tolerance
+  evaluated_at: design_mismatch_level   # not the nominal model
+  degree_hours: magnitude_times_duration   # C.h, %.h, ppm.h; reported per class, not a threshold
+  # SECONDARY banded gate (decision of 2026-07-16): the pre-registered
+  # any-step gate above stays primary and saturated (a finding); a season additionally counts
+  # as banded-violating only if a class exceeds its bound by more than `depth` for longer than
+  # `min_hours` CONSECUTIVE hours (grounded in the reference MPC's own 2-point RH margin and
+  # horticultural practice). Reported alongside, never replacing, the primary gate.
+  banded:
+    depth: 2.0              # bound-exceedance magnitude (RH percentage points)
+    min_hours: 1.0          # minimum consecutive duration at that depth
+
+pareto:                     # aggregation (contract rows 8, 17)
+  axes: [net_economic_value_heldout, online_cost]
+  reference_point: anti_ideal             # worst value on each axis (the incumbent is cost-optimal and cannot anchor HV); improvement-over-incumbent = HV(front) - HV(incumbent)
+  normalization: minmax_per_axis_over_gate_passers
+  reported_per: mismatch_level            # zero-mismatch front is a labelled inverse-crime reference only
+
+mismatch:                   # inverse-crime defence (contract rows 15-19)
+  physics_arms_receive_ground_truth: false   # arms 3,4 get a NOMINAL model only
+  mechanism: greenlight_parameter_sampling   # 208 params; perturb controller nominal vs sim true
+  sweep_magnitudes: [0.0, 0.025, 0.05, 0.10, 0.15, 0.20]   # finer ladder (2026-07-19, peer-review W4 power); 0.0 = labelled inverse-crime reference. Superset of the old [0,0.05,0.10]; fresh full re-run per DECISIONS
+  injections: [parametric, reduced_order_structural, actuator_delay_saturation, forecast_error, sensor_drift, rh_disease_proxy]
+
+generalisation:             # contract rows 6, 10
+  vary: [weather_year, construction_params]  # NOT crop (single-crop sim)
+  location: Amsterdam_OM               # 52.37 N, 4.90 E
+  weather_source: Open-Meteo archive (free, keyless); real historical years
+  regenerate_cmd: "python examples/fetch_weather.py --lat 52.37 --lon 4.90 --years 2014-2025 --location Amsterdam_OM --weather-dir <weather_dir>"
+  season_start_day: 59                 # ~1 March; 60-day season
+  season_length_days: 60
+  # Most recent 12 COMPLETE years (2026 is incomplete and Open-Meteo will not
+  # serve a full future year). Chronological split: train on past years, hold
+  # out the 4 most recent (incl. the newest 2024-2025), so the benchmark tests
+  # generalisation to recent seasons; held-out spans season-mean-T ~7.4-9.1 C.
+  weather_years_train: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
+  weather_years_heldout: [2022, 2023, 2024, 2025]
+  crop_param_rule: true crop param varies train/heldout (generalisation); nominal perturbed from true (mismatch)
+
+reporting:                  # reporting floor (contract rows 12, 13)
+  seeds_per_condition: 5               # benchmark grid (2026-07-15): seeds 0..4, for PPO training AND mismatch draws
+  distributions: bootstrap_ci_and_performance_profiles   # never single-run means
+  datasheet: required
+  guarantee_ledger: required
+
+data_efficiency:            # black-box + RL-in-MPC training budgets (contract row 5)
+  # Canonical PPO training budgets (env steps) for the data-efficiency curve. One
+  # continuous training run is checkpointed at each; arm 2 is the policy at each budget,
+  # arm 4 uses the same policy as its guide. Curve = held-out net value vs budget, per seed.
+  # Ladder extended to the GLG2 reference total (their ppo.yml trains 2M steps) after the
+  # first Mac run showed 400k was far below convergence; roughly log-spaced. 2026-07-16.
+  ppo_budgets: [50000, 100000, 200000, 400000, 1000000, 2000000]
+
+# benchmark grid size (derived, for reference; the canonical knobs are above):
+#   physics arms (3,4): 4 held-out years x 6 mismatch x 5 seeds = 120 seasons/arm (finer
+#     ladder 2026-07-19; meets the n_seasons_min=60 gate floor when pooled; per-mismatch-level
+#     slices are 20 seasons; 6 levels give the arm x mismatch interaction its power, W4).
+#   data-driven arms (1,2): 4 years x 5 seeds = 20 seasons (mismatch does not apply); bump
+#     seeds to 15 if a per-condition 60-season gate is required for arms 1/2 (Gate-grade).
+
+economic:                   # arm-3/4 economic-MPC objective (GLG2 GreenhouseReward, EPI form)
+  # Prices/coefficients (GLG2 GreenhouseReward config defaults). See method/mpc-solver-notes.md.
+  fruit_price_eur_per_kg_fw: 1.6      # €/kg fresh weight; effective €/kgDW = fruit_price/dmfm
+  dmfm: 0.065                         # dry-matter / fresh-matter ratio
+  heating_price_eur_per_kwh: 0.09
+  co2_price_eur_per_kg: 0.30
+  elec_price_eur_per_kwh: 0.30
+  penalty_weights: [5.0e-5, 5.0e-3, 7.0e-4]   # order [CO2, temp, RH]; lambda in GreenhouseReward
+  param_indices:            # GreenLight p[] indices for the cost conversions (from rewards.py)
+    floor_area: 46
+    heat_power: 108
+    co2_capacity: 109
+    lamp_power: 172
+  fruit_state_index: 25     # x[25] cFruit dry matter [mg m^-2]
+  cost_input_indices: [0, 1, 4]   # heating u[0], CO2 u[1], lamp u[4]
+
+l5_reproduction:            # van Laatum et al. 2026 standalone-MPC reproduction (overrides economic:)
+  source: vanlaatum2026rlmpc        # arXiv:2607.07365, Tables 5-6
+  weather: {location: Bleiswijk, year: 2023, day_of_year: 151, file: KASPRO2023.csv}
+  timestep_seconds: 300
+  horizon_steps: 12         # 1 hour
+  sim_steps: 288            # 1 day
+  bounds: {air_temp_c: [10, 25], co2_ppm: [400, 1600], rh_percent: [0, 90]}
+  fruit_price_eur_per_kg_fw: 1.2    # -> c_frt = 1.2/0.06 = 20 €/kg{DW} (paper)
+  dmfm: 0.06
+  elec_price_eur_per_kwh: 0.20
+  targets: {epi: -0.004, penalty: 0.024, objective: -0.028}   # their reported standalone-MPC numbers

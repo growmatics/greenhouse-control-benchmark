@@ -1,0 +1,738 @@
+{
+  "record": {
+    "config_version": "v0.2.1",
+    "git_commit": "24105d8",
+    "git_dirty": true,
+    "timestamp": "2026-07-24T06:50:27",
+    "season_days": 60,
+    "smoke": false,
+    "grid": {
+      "seasons": 20,
+      "arms": [
+        "black_box_sac"
+      ]
+    },
+    "n_failed_seasons": 0,
+    "failed_seasons": [],
+    "hardware": {
+      "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+      "processor": "x86_64",
+      "cpu_count": 22,
+      "python": "3.12.3"
+    }
+  },
+  "arms": {
+    "black_box_sac": {
+      "net_value_mean": 3.214427426328072,
+      "net_value_std": 1.933645864571314,
+      "n_seasons": 20,
+      "n_failed": 0,
+      "online_cost_seconds": 0.0003865899625848209,
+      "gate_humidity": false,
+      "gate_underpowered": true,
+      "solve_success": null
+    }
+  },
+  "seasons": [
+    {
+      "arm": "black_box_sac",
+      "label": "2022/m0.00",
+      "seed": 0,
+      "net": 4.862514819103075,
+      "online_cost_seconds": 0.0003723771055374502,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": false,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 7.364262367955888,
+        "co2": 0.0,
+        "humidity": 5.521381404602948,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 88.32863859901627,
+        "co2": 0.0,
+        "humidity": 53.395248608325076,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2022/m0.00",
+      "seed": 1,
+      "net": 4.9318893841617,
+      "online_cost_seconds": 0.0003837491150120475,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": false,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 7.5077624203843,
+        "co2": 0.0,
+        "humidity": 5.526120411206804,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 65.23562939581196,
+        "co2": 0.0,
+        "humidity": 33.91934253575329,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2022/m0.00",
+      "seed": 2,
+      "net": 4.769996652790601,
+      "online_cost_seconds": 0.0003726967762217425,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": false,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 8.409660176085222,
+        "co2": 12.687779232612343,
+        "humidity": 5.4822614418625335,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 75.26862603724017,
+        "co2": 5.683815173362277,
+        "humidity": 40.610083078953636,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2022/m0.00",
+      "seed": 3,
+      "net": 4.92902482031993,
+      "online_cost_seconds": 0.0003769939372682486,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 7.338705309557052,
+        "co2": 0.0,
+        "humidity": 5.906048448997495,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 75.25143577118683,
+        "co2": 0.0,
+        "humidity": 39.973339157838055,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2022/m0.00",
+      "seed": 4,
+      "net": 4.572031785534698,
+      "online_cost_seconds": 0.0003840949361523262,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": false,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 7.358124825450448,
+        "co2": 0.0,
+        "humidity": 5.666734522473391,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 127.05734567301528,
+        "co2": 0.0,
+        "humidity": 50.3253792089898,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2023/m0.00",
+      "seed": 0,
+      "net": 0.8658349971122767,
+      "online_cost_seconds": 0.0004157256499003807,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 9.423202231647522,
+        "co2": 0.0,
+        "humidity": 7.542042566623081,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 95.3382079789981,
+        "co2": 0.0,
+        "humidity": 87.2962064759168,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2023/m0.00",
+      "seed": 1,
+      "net": 0.786160050628645,
+      "online_cost_seconds": 0.000404695563340106,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 9.41411766932042,
+        "co2": 0.0,
+        "humidity": 7.533850656854256,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 104.56509364601763,
+        "co2": 0.0,
+        "humidity": 54.11482882843807,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2023/m0.00",
+      "seed": 2,
+      "net": 0.9435980484355149,
+      "online_cost_seconds": 0.0004094400218692155,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 9.437427677658187,
+        "co2": 0.0,
+        "humidity": 7.300329217908541,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 103.596048794061,
+        "co2": 0.0,
+        "humidity": 101.99647850958533,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2023/m0.00",
+      "seed": 3,
+      "net": 0.8918565481853982,
+      "online_cost_seconds": 0.00041744950522226194,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 9.39809114364253,
+        "co2": 78.05919798668378,
+        "humidity": 7.865737933264498,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 103.53166611161639,
+        "co2": 100.34835951807412,
+        "humidity": 80.95768551386175,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2023/m0.00",
+      "seed": 4,
+      "net": 0.37737278611465186,
+      "online_cost_seconds": 0.0004110105132809075,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 9.401571859234394,
+        "co2": 2.5285659975206727,
+        "humidity": 7.911657338753798,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 120.33022321568492,
+        "co2": 0.6321414993801682,
+        "humidity": 89.23134266581842,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2024/m0.00",
+      "seed": 0,
+      "net": 1.9930691759703798,
+      "online_cost_seconds": 0.0003651725390283082,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": false,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 5.772546222820123,
+        "co2": 0.0,
+        "humidity": 5.1054811510736755,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 66.04791524007783,
+        "co2": 0.0,
+        "humidity": 103.04565976994519,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2024/m0.00",
+      "seed": 1,
+      "net": 1.9225677704376984,
+      "online_cost_seconds": 0.0003687182709284843,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 5.74028453860976,
+        "co2": 0.0,
+        "humidity": 5.105063020582122,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 46.83420528577281,
+        "co2": 0.0,
+        "humidity": 70.75601764069043,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2024/m0.00",
+      "seed": 2,
+      "net": 2.021804069332516,
+      "online_cost_seconds": 0.0003774546384969828,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": false,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 5.874993417883148,
+        "co2": 0.0,
+        "humidity": 5.174235639766792,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 51.4048577050778,
+        "co2": 0.0,
+        "humidity": 110.96198707829598,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2024/m0.00",
+      "seed": 3,
+      "net": 2.107115149981132,
+      "online_cost_seconds": 0.00037735909625442985,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 5.7992511321803235,
+        "co2": 0.0,
+        "humidity": 5.11850282947772,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 68.95176879300267,
+        "co2": 0.0,
+        "humidity": 103.01346653565695,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2024/m0.00",
+      "seed": 4,
+      "net": 1.5009182684601043,
+      "online_cost_seconds": 0.0003741993042432655,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 4.902313673678652,
+        "co2": 58.15499096442318,
+        "humidity": 5.1939471602740355,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 66.40873817808642,
+        "co2": 44.464378358615534,
+        "humidity": 108.00891740342098,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2025/m0.00",
+      "seed": 0,
+      "net": 5.485234517992495,
+      "online_cost_seconds": 0.000375587848984523,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 7.798852213101158,
+        "co2": 0.0,
+        "humidity": 8.981541707740234,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 80.92554277775287,
+        "co2": 0.0,
+        "humidity": 63.71203767374739,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2025/m0.00",
+      "seed": 1,
+      "net": 5.251879122978954,
+      "online_cost_seconds": 0.0003899350013114115,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 7.815201625221631,
+        "co2": 2.674961374601253,
+        "humidity": 8.948598977599843,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 55.01531277629664,
+        "co2": 0.6687403436503132,
+        "humidity": 51.90263000171922,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2025/m0.00",
+      "seed": 2,
+      "net": 5.4383233132358955,
+      "online_cost_seconds": 0.0003818711575803377,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": false,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 8.173769027640144,
+        "co2": 0.0,
+        "humidity": 8.954934583485866,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 85.34118741772139,
+        "co2": 0.0,
+        "humidity": 67.4188822409397,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2025/m0.00",
+      "seed": 3,
+      "net": 5.4677168593189105,
+      "online_cost_seconds": 0.00038823097768616183,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": false,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": false,
+        "humidity": false,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 7.8113761664669115,
+        "co2": 0.0,
+        "humidity": 8.958453302633728,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 63.30313764909126,
+        "co2": 0.0,
+        "humidity": 51.89751617906148,
+        "lamp": 0.0
+      }
+    },
+    {
+      "arm": "black_box_sac",
+      "label": "2025/m0.00",
+      "seed": 4,
+      "net": 5.169640386466856,
+      "online_cost_seconds": 0.0003850372933778272,
+      "solve_success": null,
+      "advisor_fallback_steps": null,
+      "rl_selection_rate": null,
+      "violated": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      },
+      "violated_banded": {
+        "temperature": true,
+        "co2": true,
+        "humidity": true,
+        "lamp": false
+      },
+      "max_excursion": {
+        "temperature": 7.671280687808135,
+        "co2": 358.02844385309436,
+        "humidity": 10.148119181538931,
+        "lamp": 0.0
+      },
+      "degree_hours": {
+        "temperature": 94.18314091422342,
+        "co2": 631.3590717873226,
+        "humidity": 86.89480522027168,
+        "lamp": 0.0
+      }
+    }
+  ],
+  "pareto": {
+    "arms": [],
+    "non_dominated": [],
+    "hypervolume": 0.0,
+    "hypervolume_vs_incumbent": 0.0,
+    "reference": "anti_ideal",
+    "gated": true
+  },
+  "pareto_ungated_diagnostic": {
+    "arms": [
+      "black_box_sac"
+    ],
+    "non_dominated": [
+      "black_box_sac"
+    ],
+    "hypervolume": 0.0,
+    "hypervolume_vs_incumbent": 0.0,
+    "reference": "anti_ideal",
+    "gated": false
+  }
+}

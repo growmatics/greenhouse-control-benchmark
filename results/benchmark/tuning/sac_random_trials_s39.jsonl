@@ -1,0 +1,3 @@
+{"trial": 39, "config": {"learning_rate": 0.00017906591442303817, "n_envs": 2, "train_freq": 16, "gradient_steps": 10, "tau": 0.008343987040149655}, "val_net": 1.7041699649757671, "actual_steps": 1000000, "checkpoint": "sac_tune_t39.zip"}
+{"trial": 10, "config": {"learning_rate": 4.173339838585534e-05, "n_envs": 2, "train_freq": 8, "gradient_steps": 8, "tau": 0.01825241083122009}, "val_net": -0.5512459839068695, "actual_steps": 1000000, "checkpoint": "sac_tune_t10.zip"}
+{"trial": 1, "config": {"learning_rate": 0.0004231949517477533, "n_envs": 1, "train_freq": 16, "gradient_steps": 10, "tau": 0.011593141434830555}, "val_net": 1.9073741906478716, "actual_steps": 1000000, "checkpoint": "sac_tune_t01.zip"}

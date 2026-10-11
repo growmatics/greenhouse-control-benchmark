@@ -1,0 +1,31 @@
+{
+  "seed": 1,
+  "algo": "sac",
+  "location": "Amsterdam_OM",
+  "curve": {
+    "50000": {
+      "heldout_net": -36.557360825370644,
+      "actual_steps": 50000
+    },
+    "100000": {
+      "heldout_net": -15.011068420415189,
+      "actual_steps": 100000
+    },
+    "200000": {
+      "heldout_net": -15.845630656598017,
+      "actual_steps": 200000
+    },
+    "400000": {
+      "heldout_net": -0.7785911151769973,
+      "actual_steps": 400000
+    },
+    "1000000": {
+      "heldout_net": 1.1935004334674528,
+      "actual_steps": 1000000
+    },
+    "2000000": {
+      "heldout_net": 1.7465729610311738,
+      "actual_steps": 2000000
+    }
+  }
+}

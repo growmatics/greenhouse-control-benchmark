@@ -1,0 +1,32 @@
+{
+  "seed": 0,
+  "location": "Amsterdam_OM",
+  "recipe": "glg2-reference",
+  "note": "final segment (1M->2M) resumed from the saved 1M checkpoint pair after the uncapped process was stopped (thread-thrash; see the WSL run report); training-env episode stream reset at the boundary, all else continuous",
+  "curve": {
+    "50000": {
+      "heldout_net": -15.958681825942572,
+      "actual_steps": 65536
+    },
+    "100000": {
+      "heldout_net": -16.566852871918453,
+      "actual_steps": 114688
+    },
+    "200000": {
+      "heldout_net": -7.700989405860513,
+      "actual_steps": 212992
+    },
+    "400000": {
+      "heldout_net": 0.001747085529345771,
+      "actual_steps": 409600
+    },
+    "1000000": {
+      "heldout_net": 3.2797151863939185,
+      "actual_steps": 1015808
+    },
+    "2000000": {
+      "heldout_net": 3.78197516781741,
+      "actual_steps": 2015232
+    }
+  }
+}

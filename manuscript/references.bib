@@ -1,0 +1,1846 @@
+% Shared master bibliography for the whole repo. Single source of truth.
+% Every paper cites keys from this file; LaTeX emits only the entries a given
+% paper actually cites, so one library serves all papers with no duplication.
+% Add new entries here, never in a per-paper file. Any field you cannot confirm,
+% leave out rather than guess.
+%
+% Two tiers:
+%   CITED entries (above the divider) are verified and ready to cite; the
+%   citation-checker agent enforces this.
+%   STUDIED entries (below the "Studied sources" divider) are the complete
+%   reading log: every source we study (paper, product, project, inspiration)
+%   gets logged here as we read it, with a status note, even before it is cited.
+%   Complete a studied entry (real title/authors) before citing it; never
+%   fabricate its fields. This keeps the bib the single, complete record of what
+%   we have read (CLAUDE.md).
+
+@article{karniadakis2021physics,
+  title   = {Physics-informed machine learning},
+  author  = {Karniadakis, George Em and Kevrekidis, Ioannis G. and Lu, Lu and Perdikaris, Paris and Wang, Sifan and Yang, Liu},
+  journal = {Nature Reviews Physics},
+  volume  = {3},
+  pages   = {422--440},
+  year    = {2021},
+  doi     = {10.1038/s42254-021-00314-5}
+}
+
+@article{raissi2019pinn,
+  title   = {Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations},
+  author  = {Raissi, Maziar and Perdikaris, Paris and Karniadakis, George Em},
+  journal = {Journal of Computational Physics},
+  volume  = {378},
+  pages   = {686--707},
+  year    = {2019},
+  doi     = {10.1016/j.jcp.2018.10.045}
+}
+
+@article{reichstein2019deep,
+  title   = {Deep learning and process understanding for data-driven Earth system science},
+  author  = {Reichstein, Markus and Camps-Valls, Gustau and Stevens, Bjorn and Jung, Martin and Denzler, Joachim and Carvalhais, Nuno and Prabhat},
+  journal = {Nature},
+  volume  = {566},
+  pages   = {195--204},
+  year    = {2019},
+  doi     = {10.1038/s41586-019-0912-1}
+}
+
+@article{farquhar1980biochemical,
+  title   = {A biochemical model of photosynthetic CO2 assimilation in leaves of C3 species},
+  author  = {Farquhar, Graham D. and von Caemmerer, Susanne and Berry, Joseph A.},
+  journal = {Planta},
+  volume  = {149},
+  pages   = {78--90},
+  year    = {1980},
+  doi     = {10.1007/BF00386231}
+}
+
+@article{mansour2025adaptive,
+  title   = {Adaptive robust greenhouse climate control: combining deep reinforcement learning and economic optimization},
+  author  = {Mansour, Mohamed and Sathyanarayanan, Kiran Kumar and Sauerteig, Philipp and Streif, Stefan},
+  journal = {Smart Agricultural Technology},
+  year    = {2025},
+  url     = {https://www.sciencedirect.com/science/article/pii/S2772375525005581},
+}
+
+@article{vanlaatum2024greenlight,
+  title   = {{GreenLight-Gym}: Reinforcement learning benchmark environment for control of greenhouse production systems},
+  author  = {van Laatum, Bart and van Henten, Eldert J. and Boersma, Sjoerd},
+  journal = {IFAC-PapersOnLine},
+  volume  = {59},
+  number  = {23},
+  pages   = {437--442},
+  year    = {2025},
+  doi     = {10.1016/j.ifacol.2025.11.827},
+  url     = {https://arxiv.org/abs/2410.05336v2},
+}
+
+@article{bergstra2012random,
+  title   = {Random Search for Hyper-Parameter Optimization},
+  author  = {Bergstra, James and Bengio, Yoshua},
+  journal = {Journal of Machine Learning Research},
+  volume  = {13},
+  number  = {10},
+  pages   = {281--305},
+  year    = {2012},
+  url     = {https://www.jmlr.org/papers/v13/bergstra12a.html},
+}
+
+% --- Paper 002 survey: source-verified 2026-07-13 by lit-scout web pass. -----
+% "VERIFIED" in the notes below means the SOURCE is confirmed (it exists, with
+% the title, authors, venue, and id recorded), NOT that citation-checker has
+% verified the claim each citation supports; that enforcement pass runs at the
+% drafting-to-review gate.
+% Method-family anchors (physics-to-learning spectrum) and domain/control works.
+
+% Positioning: general physics-informed-ML / PINN surveys (other domains).
+
+@misc{piml_urban_survey_2025,
+  title  = {A Survey of Physics-Informed AI for Complex Urban Systems},
+  author = {Xu, En and Wang, Huandong and Zhang, Yunke and Li, Sibo and Tang, Yinzhou and Zhou, Zhilun and Lin, Yuming and Yuan, Yuan and Fan, Xiaochen and Ding, Jingtao and Li, Yong},
+  year   = {2025},
+  eprint = {2506.13777},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2506.13777},
+}
+
+@article{pinn_methodology_review_2025,
+  title   = {Physics-Informed Neural Networks: A Review of Methodological Evolution, Theoretical Foundations, and Interdisciplinary Frontiers Toward Next-Generation Scientific Computing},
+  author  = {Ren, Z. and Zhou, S. and Liu, D. and Liu, Q.},
+  journal = {Applied Sciences},
+  volume  = {15},
+  number  = {14},
+  pages   = {8092},
+  year    = {2025},
+  doi     = {10.3390/app15148092},
+}
+
+@article{ml_physics_prediction_survey_2024,
+  title   = {Machine Learning with Physics Knowledge for Prediction: A Survey},
+  author  = {Watson, Joe and Song, Chen and Weeger, Oliver and Gruner, Theo and Le, An T. and Pompetzki, Kay and Hendawy, Ahmed and Arenz, Oleg and Trojak, Will and Cranmer, Miles and D'Eramo, Carlo and B{\"u}low, Fabian and Goyal, Tanmay and Peters, Jan and Hoffman, Martin W.},
+  journal = {Transactions on Machine Learning Research (TMLR)},
+  year    = {2024},
+  eprint  = {2408.09840},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2408.09840},
+}
+
+@article{wu2025combustion,
+  title   = {Physics-informed machine learning for combustion: A review},
+  author  = {Wu, Jiahao and Wang, Xutun and Zhang, Guihua and Liu, Jiayue and Li, Xin and Zhang, Yang and Zhang, Hai and Lyu, Junfu and Wang, Bing and Wu, Yuxin},
+  year    = {2025},
+  journal = {arXiv preprint arXiv:2509.03347},
+  eprint  = {2509.03347},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2509.03347},
+}
+
+@article{batuwatta2025drying,
+  title   = {Physics-Informed Machine Learning for Microscale Drying of Plant-Based Foods: A Systematic Review of Computational Models and Experimental Insights},
+  author  = {Batuwatta-Gamage, C. P. and Jeong, H. and Karunasena, H. C. P. and Karim, M. A. and Rathnayaka, C. M. and Gu, Y. T.},
+  year    = {2025},
+  journal = {arXiv preprint arXiv:2501.09034},
+  eprint  = {2501.09034},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2501.09034},
+}
+
+% Closest CEA control review (competes).
+
+@article{greenhouse_control_review_2025,
+  title   = {A Review of Environmental Control Strategies and Models for Modern Agricultural Greenhouses},
+  author  = {Chen, Shuailiang and Liu, Aolong and Tang, Fei and Hou, Pei and Lu, Yanli and Yuan, Pei},
+  journal = {Sensors},
+  volume  = {25},
+  number  = {5},
+  pages   = {1388},
+  year    = {2025},
+  doi     = {10.3390/s25051388},
+}
+
+% Control works (build-on) for the application map.
+
+@article{rl_vs_mpc_greenhouse_2023,
+  title   = {Reinforcement Learning versus Model Predictive Control on greenhouse climate control},
+  author  = {Morcego, Bernardo and Yin, Wenjie and Boersma, Sjoerd and van Henten, Eldert and Puig, Vicen{\c{c}} and Sun, Congcong},
+  journal = {Computers and Electronics in Agriculture},
+  volume  = {215},
+  pages   = {108372},
+  year    = {2023},
+  doi     = {10.1016/j.compag.2023.108372},
+}
+
+@misc{xiao2025grower,
+  title  = {Grower-in-the-Loop Interactive Reinforcement Learning for Greenhouse Climate Control},
+  author = {Xiao, Maxiu and Lan, Jianglin and Yu, Jingxin and Ma, Weihong and Xie, Qiuju and Sun, Congcong},
+  year   = {2025},
+  eprint = {2505.23355},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2505.23355},
+}
+
+@article{jang2026offline,
+  title   = {Offline reinforcement learning for optimal control of a greenhouse with ground source heat pump},
+  author  = {Jang, Changwon and Kim, Dongwoo and Yun, Rin},
+  journal = {Energy},
+  year    = {2026},
+  url     = {https://www.sciencedirect.com/science/article/pii/S0360544226015100},
+}
+
+@misc{salem2025tinyml,
+  title  = {A TinyML Reinforcement Learning Approach for Energy-Efficient Light Control in Low-Cost Greenhouse Systems},
+  author = {Salem, Mohamed Abdallah and Cuevas Perez, Manuel and Rabia, Ahmed Harb},
+  year   = {2025},
+  eprint = {2512.01167},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2512.01167},
+}
+
+% Physics-informed / process-informed models on the CEA control problem (build-on).
+
+@misc{biswas2026pinn,
+  title  = {Physics-Informed Neural Learning for State Reconstruction and Parameter Identification in Coupled Greenhouse Climate Dynamics},
+  author = {Biswas, Sani and Ansari, Khursheed J. and Akhtar, Md. Nasim},
+  year   = {2026},
+  eprint = {2605.02524},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2605.02524},
+}
+
+@misc{shi2026agripinn,
+  title  = {AgriPINN: A Process-Informed Neural Network for Interpretable and Scalable Crop Biomass Prediction Under Water Stress},
+  author = {Shi, Yue and Han, Liangxiu and Zhang, Xin and Sobeih, Tam and Gaiser, Thomas and Thuy, Nguyen Huu and Behrend, Dominik and Srivastava, Amit Kumar and Halder, Krishnagopal and Ewert, Frank},
+  year   = {2026},
+  eprint = {2601.16045},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2601.16045},
+}
+
+@article{cohen2022dcea,
+  title   = {Dynamically Controlled Environment Agriculture: Integrating Machine Learning and Mechanistic and Physiological Models for Sustainable Food Cultivation},
+  author  = {Cohen, A. R. and Chen, G. and Berger, E. M. and Warrier, S. and Lan, G. and Grubert, E. and Dellaert, F. and Chen, Y.},
+  journal = {ACS ES\&T Engineering},
+  volume  = {2},
+  number  = {1},
+  pages   = {3--19},
+  year    = {2022},
+  doi     = {10.1021/acsestengg.1c00269},
+}
+
+@article{zhang2023mlcrop,
+  title   = {Machine learning versus crop growth models: an ally, not a rival},
+  author  = {Zhang, Ningyi and Zhou, Xiaohan and Kang, Mengzhen and Hu, Bao-Gang and Heuvelink, Ep and Marcelis, Leo F. M.},
+  journal = {AoB PLANTS},
+  volume  = {15},
+  number  = {2},
+  pages   = {plac061},
+  year    = {2023},
+  doi     = {10.1093/aobpla/plac061},
+}
+
+% Method-family anchors added in the 2026-07-13 expansion: residual learning and
+% hard-constrained architectures (control-relevant), to complete the spectrum.
+
+@inproceedings{johannink2019residual,
+  title     = {Residual Reinforcement Learning for Robot Control},
+  author    = {Johannink, Tobias and Bahl, Shikhar and Nair, Ashvin and Luo, Jianlan and Kumar, Avinash and Loskyll, Matthias and Ojea, Juan Aparicio and Solowjow, Eugen and Levine, Sergey},
+  booktitle = {2019 IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2019},
+  eprint    = {1812.03201},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/1812.03201},
+}
+
+@inproceedings{donti2021dc3,
+  title     = {DC3: A learning method for optimization with hard constraints},
+  author    = {Donti, Priya L. and Rolnick, David and Kolter, J. Zico},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2021},
+  eprint    = {2104.12225},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2104.12225},
+}
+
+@inproceedings{amos2018diffmpc,
+  title     = {Differentiable MPC for End-to-end Planning and Control},
+  author    = {Amos, Brandon and Rodriguez, Ivan Dario Jimenez and Sacks, Jacob and Boots, Byron and Kolter, J. Zico},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2018},
+  eprint    = {1810.13400},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/1810.13400},
+}
+
+% --- Paper 002 coverage-expansion sweep: source-verified 2026-07-13 (b). -----
+% Same "VERIFIED = source confirmed, not claim-checked" convention as above.
+
+% Area 1: classical greenhouse optimal / model-based control (lineage).
+
+@phdthesis{vanhenten1994greenhouse,
+  title  = {Greenhouse climate management: an optimal control approach},
+  author = {van Henten, Eldert J.},
+  school = {Wageningen Agricultural University},
+  year   = {1994},
+  url    = {https://library.wur.nl/WebQuery/wurpubs/25055},
+}
+
+@article{vanhenten2009timescale,
+  title   = {Time-scale decomposition of an optimal control problem in greenhouse climate management},
+  author  = {van Henten, Eldert J. and Bontsema, Jan},
+  journal = {Control Engineering Practice},
+  volume  = {17},
+  number  = {1},
+  pages   = {88--96},
+  year    = {2009},
+  doi     = {10.1016/j.conengprac.2008.05.008},
+}
+
+@phdthesis{tap2000economics,
+  title  = {Economics-based optimal control of greenhouse tomato crop production},
+  author = {Tap, R. F.},
+  school = {Wageningen Agricultural University},
+  year   = {2000},
+  doi    = {10.18174/195235},
+}
+
+@book{vanstraten2010optimal,
+  title     = {Optimal Control of Greenhouse Cultivation},
+  author    = {van Straten, Gerrit and van Willigenburg, Gerard and van Henten, Eldert and van Ooteghem, Rachel},
+  publisher = {CRC Press},
+  year      = {2010},
+  isbn      = {9781420059618},
+}
+
+@inproceedings{vanstraten2010survey,
+  title     = {Optimal greenhouse cultivation control: survey and perspectives},
+  author    = {van Straten, Gerrit and van Henten, Eldert J.},
+  booktitle = {IFAC Proceedings Volumes (Agricontrol 2010, Kyoto)},
+  year      = {2010},
+  url       = {https://www.sciencedirect.com/science/article/pii/S1474667015310326},
+}
+
+@article{seginer1997ann,
+  title   = {Some artificial neural network applications to greenhouse environmental control},
+  author  = {Seginer, Ido},
+  journal = {Computers and Electronics in Agriculture},
+  volume  = {18},
+  number  = {2--3},
+  pages   = {167--186},
+  year    = {1997},
+  url     = {https://www.sciencedirect.com/science/article/abs/pii/S0168169997000288},
+}
+
+@article{seginer1994nnclimate,
+  title   = {Neural network models of the greenhouse climate},
+  author  = {Seginer, Ido and Boulard, Thierry and Bailey, Bryan J.},
+  journal = {Journal of Agricultural Engineering Research},
+  year    = {1994},
+}
+
+% Area 2: broader DRL and MPC body for greenhouse climate/energy.
+
+@article{chen2022nmpc,
+  title   = {Intelligent control and energy optimization in controlled environment agriculture via nonlinear model predictive control of semi-closed greenhouse},
+  author  = {Chen, Wei-Han and Mattson, Neil S. and You, Fengqi},
+  journal = {Applied Energy},
+  volume  = {320},
+  pages   = {119334},
+  year    = {2022},
+  doi     = {10.1016/j.apenergy.2022.119334},
+}
+
+@article{mahmood2023robustmpc,
+  title   = {Data-driven robust model predictive control for greenhouse temperature control and energy utilisation assessment},
+  author  = {Mahmood, Farhat and Govindan, Rajesh and Bermak, Amine and Yang, David and Al-Ansari, Tareq},
+  journal = {Applied Energy},
+  volume  = {343},
+  pages   = {121190},
+  year    = {2023},
+  doi     = {10.1016/j.apenergy.2023.121190},
+}
+
+@misc{mallick2024rlmpc,
+  title  = {Reinforcement Learning-based Model Predictive Control for Greenhouse Climate Control},
+  author = {Mallick, Samuel and Airaldi, Filippo and Dabiri, Azita and Sun, Congcong and De Schutter, Bart},
+  year   = {2024},
+  eprint = {2409.12789},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2409.12789},
+}
+
+@misc{msaad2025rlguidedmpc,
+  title  = {RL-Guided MPC for Autonomous Greenhouse Control},
+  author = {Msaad, Salim and Harraway, Murray and McAllister, Robert D.},
+  year   = {2025},
+  eprint = {2506.13278},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2506.13278},
+}
+
+@misc{vanlaatum2026rlmpc,
+  title  = {Improving greenhouse fruit-production control by integrating reinforcement learning into short-horizon model predictive control},
+  author = {van Laatum, Bart and Msaad, Salim and van Henten, Eldert J. and McAllister, Robert D. and Boersma, Sjoerd},
+  year   = {2026},
+  eprint = {2607.07365},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2607.07365},
+}
+
+@inproceedings{zhang2021robustmbrl,
+  title     = {Robust Model-based Reinforcement Learning for Autonomous Greenhouse Control},
+  author    = {Zhang, Wanpeng and Cao, Xiaoyan and Yao, Yao and An, Zhicheng and Xiao, Xi and Luo, Dijun},
+  booktitle = {Proceedings of the 13th Asian Conference on Machine Learning (ACML), PMLR 157},
+  pages     = {1208--1223},
+  year      = {2021},
+  eprint    = {2108.11645},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2108.11645},
+}
+
+@inproceedings{cao2022igrow,
+  title     = {iGrow: A Smart Agriculture Solution to Autonomous Greenhouse Control},
+  author    = {Cao, Xiaoyan and Yao, Yao and Li, Lanqing and Zhang, Wanpeng and An, Zhicheng and Zhang, Zhong and Xiao, Li and Guo, Shihui and Cao, Xiaoyu and Wu, Meihong and Luo, Dijun},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  year      = {2022},
+  eprint    = {2107.05464},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2107.05464},
+}
+
+@misc{vanmourik2023stochastic,
+  title  = {Plant Performance in Precision Horticulture: Optimal climate control under stochastic uncertainty},
+  author = {van Mourik, Simon and van't Ooster, Bert and Vellekoop, Michel},
+  year   = {2023},
+  eprint = {2303.14678},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2303.14678},
+}
+
+% Area 3: mechanistic crop / greenhouse model lineage (physics backbones).
+
+@article{jones1991tomgro,
+  title   = {A dynamic tomato growth and yield model (TOMGRO)},
+  author  = {Jones, James W. and Dayan, Ehud and Allen, L. Hartwell and Van Keulen, Herman and Challa, Hugo},
+  journal = {Transactions of the ASAE},
+  volume  = {34},
+  number  = {2},
+  pages   = {663--672},
+  year    = {1991},
+}
+
+@article{katzin2020greenlight,
+  title   = {GreenLight -- An open source model for greenhouses with supplemental lighting: Evaluation of heat requirements under LED and HPS lamps},
+  author  = {Katzin, David and van Mourik, Simon and Kempkes, Frank and van Henten, Eldert J.},
+  journal = {Biosystems Engineering},
+  volume  = {194},
+  pages   = {61--81},
+  year    = {2020},
+  url     = {https://www.sciencedirect.com/science/article/pii/S1537511020300738},
+}
+
+@misc{fink2023tomatomodels,
+  title  = {Comparison of Dynamic Tomato Growth Models for Optimal Control in Greenhouses},
+  author = {Fink, Michael and Daniels, Annalena and Qian, Cheng and Mart{\'i}nez Vel{\'a}squez, V{\'i}ctor and Salotra, Sahil and Wollherr, Dirk},
+  year   = {2023},
+  eprint = {2308.06031},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2308.06031},
+}
+
+% Area 4: nutrient / irrigation / CO2 control.
+
+@article{padillanates2025irrigation,
+  title   = {Greenhouse Irrigation Control Based on Reinforcement Learning},
+  author  = {Padilla-Nates, J. P. and Garcia, L. D. and Lozoya, C. and Orona, L. and Cortes-Perez, A.},
+  journal = {Agronomy},
+  volume  = {15},
+  number  = {12},
+  pages   = {2781},
+  year    = {2025},
+  doi     = {10.3390/agronomy15122781},
+}
+
+% Area 5: Gaussian-process / Bayesian control.
+
+@article{kim2025gpsmpc,
+  title   = {Energy-efficient greenhouse climate control using Gaussian process-based stochastic model predictive control},
+  author  = {Kim, Jinsung and You, Fengqi},
+  journal = {Applied Energy},
+  volume  = {391},
+  pages   = {125841},
+  year    = {2025},
+  doi     = {10.1016/j.apenergy.2025.125841},
+}
+
+% Area 6: physics-informed / hard-constrained control, transferable (band 2.4).
+
+@article{jiang2025pimodnn,
+  title   = {Physics-informed Modularized Neural Network for Advanced Building Control by Deep Reinforcement Learning},
+  author  = {Jiang, Zixin and Wang, Xuezheng and Dong, Bing},
+  journal = {Advances in Applied Energy},
+  volume  = {19},
+  pages   = {100237},
+  year    = {2025},
+  eprint  = {2504.05397},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2504.05397},
+}
+
+% Area 7: novelty re-check (adjacent recent agriculture survey).
+
+@misc{goldenits2024rldt,
+  title  = {Current applications and potential future directions of reinforcement learning-based Digital Twins in agriculture},
+  author = {Goldenits, Georg and Mallinger, Kevin and Raubitzek, Sebastian and Neubauer, Thomas},
+  year   = {2024},
+  eprint = {2406.08854},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2406.08854},
+}
+
+% --- Paper 002 targeted reference pass: source-verified 2026-07-14. ---------
+% Borrowed-method anchors for Section 5 (agenda), reporting standards, and the
+% control field's own review canon for positioning. Same "VERIFIED = source
+% confirmed, not claim-checked" convention as above.
+
+% Multi-objective evaluation: Pareto front + dominated-hypervolume metric.
+
+@article{deb2002nsga2,
+  title   = {A fast and elitist multiobjective genetic algorithm: NSGA-II},
+  author  = {Deb, Kalyanmoy and Pratap, Amrit and Agarwal, Sameer and Meyarivan, T.},
+  journal = {IEEE Transactions on Evolutionary Computation},
+  volume  = {6},
+  number  = {2},
+  pages   = {182--197},
+  year    = {2002},
+  doi     = {10.1109/4235.996017},
+}
+
+@article{zitzler1999hypervolume,
+  title   = {Multiobjective evolutionary algorithms: a comparative case study and the strength Pareto approach},
+  author  = {Zitzler, Eckart and Thiele, Lothar},
+  journal = {IEEE Transactions on Evolutionary Computation},
+  volume  = {3},
+  number  = {4},
+  pages   = {257--271},
+  year    = {1999},
+  doi     = {10.1109/4235.797969},
+}
+
+% Domain randomization for sim-to-real transfer.
+
+@inproceedings{tobin2017domainrand,
+  title     = {Domain randomization for transferring deep neural networks from simulation to the real world},
+  author    = {Tobin, Josh and Fong, Rachel and Ray, Alex and Schneider, Jonas and Zaremba, Wojciech and Abbeel, Pieter},
+  booktitle = {2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages     = {23--30},
+  year      = {2017},
+  doi       = {10.1109/IROS.2017.8202133},
+  eprint    = {1703.06907},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/1703.06907},
+}
+
+@article{kaipio2007inversecrime,
+  title     = {Statistical inverse problems: Discretization, model reduction and inverse crimes},
+  author    = {Kaipio, Jari and Somersalo, Erkki},
+  journal   = {Journal of Computational and Applied Mathematics},
+  volume    = {198},
+  number    = {2},
+  pages     = {493--504},
+  year      = {2007},
+  doi       = {10.1016/j.cam.2005.09.027},
+  url       = {https://doi.org/10.1016/j.cam.2005.09.027},
+}
+
+% Statistical-rigor evaluation in reinforcement learning.
+
+@inproceedings{agarwal2021precipice,
+  title     = {Deep reinforcement learning at the edge of the statistical precipice},
+  author    = {Agarwal, Rishabh and Schwarzer, Max and Castro, Pablo Samuel and Courville, Aaron C. and Bellemare, Marc G.},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2021},
+  eprint    = {2108.13264},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2108.13264},
+}
+
+@inproceedings{henderson2018rlmatters,
+  title     = {Deep reinforcement learning that matters},
+  author    = {Henderson, Peter and Islam, Riashat and Bachman, Philip and Pineau, Joelle and Precup, Doina and Meger, David},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {32},
+  number    = {1},
+  pages     = {3207--3214},
+  year      = {2018},
+  doi       = {10.1609/aaai.v32i1.11694},
+}
+
+% Reporting standards for datasets and models.
+
+@article{gebru2021datasheets,
+  title   = {Datasheets for datasets},
+  author  = {Gebru, Timnit and Morgenstern, Jamie and Vecchione, Briana and Vaughan, Jennifer Wortman and Wallach, Hanna and Daum{\'e} III, Hal and Crawford, Kate},
+  journal = {Communications of the ACM},
+  volume  = {64},
+  number  = {12},
+  pages   = {86--92},
+  year    = {2021},
+  doi     = {10.1145/3458723},
+  eprint  = {1803.09010},
+  archivePrefix = {arXiv},
+}
+
+@inproceedings{mitchell2019modelcards,
+  title     = {Model cards for model reporting},
+  author    = {Mitchell, Margaret and Wu, Simone and Zaldivar, Andrew and Barnes, Parker and Vasserman, Lucy and Hutchinson, Ben and Spitzer, Elena and Raji, Inioluwa Deborah and Gebru, Timnit},
+  booktitle = {Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT*)},
+  pages     = {220--229},
+  year      = {2019},
+  doi       = {10.1145/3287560.3287596},
+  eprint    = {1810.03993},
+  archivePrefix = {arXiv},
+}
+
+% Control field's own review canon: learning-based / safe-learning control.
+
+@article{hewing2020lbmpc,
+  title   = {Learning-based model predictive control: toward safe learning in control},
+  author  = {Hewing, Lukas and Wabersich, Kim P. and Menner, Marcel and Zeilinger, Melanie N.},
+  journal = {Annual Review of Control, Robotics, and Autonomous Systems},
+  volume  = {3},
+  pages   = {269--296},
+  year    = {2020},
+  doi     = {10.1146/annurev-control-090419-075625},
+}
+
+@article{brunke2022safelearning,
+  title   = {Safe learning in robotics: from learning-based control to safe reinforcement learning},
+  author  = {Brunke, Lukas and Greeff, Melissa and Hall, Adam W. and Yuan, Zhaocong and Zhou, Siqi and Panerati, Jacopo and Schoellig, Angela P.},
+  journal = {Annual Review of Control, Robotics, and Autonomous Systems},
+  volume  = {5},
+  pages   = {411--444},
+  year    = {2022},
+  doi     = {10.1146/annurev-control-042920-020211},
+}
+
+@article{garcia2015saferl,
+  title   = {A comprehensive survey on safe reinforcement learning},
+  author  = {Garc{\'i}a, Javier and Fern{\'a}ndez, Fernando},
+  journal = {Journal of Machine Learning Research},
+  volume  = {16},
+  number  = {1},
+  pages   = {1437--1480},
+  year    = {2015},
+  url     = {http://jmlr.org/papers/v16/garcia15a.html},
+}
+
+% Paper 002 targeted pass: two close review-canon surfaces the draft omitted.
+% Source-verified 2026-07-14 (arXiv abstract pages + published venue).
+
+@article{banerjee2025pirl,
+  title   = {A survey on physics informed reinforcement learning: Review and open problems},
+  author  = {Banerjee, Chayan and Nguyen, Kien and Fookes, Clinton and Raissi, Maziar},
+  journal = {Expert Systems with Applications},
+  volume  = {287},
+  pages   = {128166},
+  year    = {2025},
+  doi     = {10.1016/j.eswa.2025.128166},
+  eprint  = {2309.01909},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2309.01909},
+}
+
+@article{drgona2025safepiml,
+  title   = {Safe Physics-Informed Machine Learning for Dynamics and Control},
+  author  = {Drgo{\v{n}}a, J{\'a}n and Nghiem, Truong X. and Beckers, Thomas and Fazlyab, Mahyar and Mallada, Enrique and Jones, Colin and Vrabie, Draguna and Brunton, Steven L. and Findeisen, Rolf},
+  year    = {2025},
+  eprint  = {2504.12952},
+  archivePrefix = {arXiv},
+  primaryClass = {eess.SY},
+  url     = {https://arxiv.org/abs/2504.12952},
+}
+
+@inproceedings{nghiem2023pimlcontrol,
+  title   = {Physics-Informed Machine Learning for Modeling and Control of Dynamical Systems},
+  author  = {Nghiem, Truong X. and Drgo{\v{n}}a, J{\'a}n and Jones, Colin and Nagy, Zoltan and Schwan, Roland and Dey, Biswadip and Chakrabarty, Ankush and Di Cairano, Stefano and Paulson, Joel A. and Carron, Andrea and Zeilinger, Melanie N. and Shaw Cortez, Wenceslao and Vrabie, Draguna L.},
+  booktitle = {2023 American Control Conference (ACC)},
+  year    = {2023},
+  doi     = {10.23919/ACC55779.2023.10155901},
+  eprint  = {2306.13867},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2306.13867},
+}
+
+% Promoted from STUDIED after author/venue confirmation 2026-07-14.
+
+@article{hemming2020cherrytomato,
+  title   = {Cherry tomato production in intelligent greenhouses---sensors and AI for control of climate, irrigation, crop yield, and quality},
+  author  = {Hemming, Silke and de Zwart, Feije and Elings, Anne and Petropoulou, Anna and Righini, Isabella},
+  journal = {Sensors},
+  volume  = {20},
+  number  = {22},
+  pages   = {6430},
+  year    = {2020},
+  doi     = {10.3390/s20226430},
+}
+
+@article{vanthoor2011climate,
+  title   = {A methodology for model-based greenhouse design: Part 1, a greenhouse climate model for a broad range of designs and climates},
+  author  = {Vanthoor, B. H. E. and Stanghellini, C. and van Henten, E. J. and de Visser, P. H. B.},
+  journal = {Biosystems Engineering},
+  volume  = {110},
+  number  = {4},
+  pages   = {363--377},
+  year    = {2011},
+  doi     = {10.1016/j.biosystemseng.2011.06.001},
+}
+
+@article{vanthoor2011yield,
+  title   = {A methodology for model-based greenhouse design: Part 2, description and validation of a tomato yield model},
+  author  = {Vanthoor, B. H. E. and de Visser, P. H. B. and Stanghellini, C. and van Henten, E. J.},
+  journal = {Biosystems Engineering},
+  volume  = {110},
+  number  = {4},
+  pages   = {378--395},
+  year    = {2011},
+  doi     = {10.1016/j.biosystemseng.2011.08.005},
+}
+
+@article{piml_building_review_2025,
+  title   = {Physics-informed machine learning for building performance simulation---A review of a nascent field},
+  author  = {Jiang, Zixin and Wang, Xuezheng and Li, Han and Hong, Tianzhen and You, Fengqi and Drgo{\v{n}}a, J{\'a}n and Vrabie, Draguna and Dong, Bing},
+  journal = {Advances in Applied Energy},
+  year    = {2025},
+  eprint  = {2504.00937},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2504.00937},
+}
+
+% --- Paper 002 targeted CEA-domain reference pass: source-verified 2026-07-14.
+% Horticulture references the manuscript asserts without citation (microclimate/
+% VPD, humidity+disease, nutrient solution, Next Generation Growing + temperature
+% integration, and the 1st Autonomous Greenhouse Challenge). All CITED: authors,
+% year, and venue confirmed against primary WUR/ISHS/Springer/MDPI records. Same
+% "VERIFIED = source confirmed, not claim-checked" convention as above.
+
+% (1) Greenhouse microclimate / transpiration / VPD: the canonical reference.
+
+@phdthesis{stanghellini1987transpiration,
+  title  = {Transpiration of greenhouse crops: an aid to climate management},
+  author = {Stanghellini, Cecilia},
+  school = {Wageningen Agricultural University},
+  year   = {1987},
+  doi    = {10.18174/202121},
+  url    = {https://research.wur.nl/en/publications/transpiration-of-greenhouse-crops-an-aid-to-climate-management/},
+}
+
+% (2) Humidity and disease pressure (Botrytis) as a control constraint.
+
+@inproceedings{koerner2005botrytis,
+  title     = {Model based humidity control of Botrytis in greenhouse cultivation},
+  author    = {K{\"o}rner, Oliver and Holst, Niels},
+  booktitle = {Acta Horticulturae},
+  volume    = {691},
+  pages     = {141--148},
+  year      = {2005},
+  doi       = {10.17660/ActaHortic.2005.691.15},
+}
+
+% (3) Nutrient solution control in soilless greenhouse culture (EC, pH, fertigation).
+
+@book{sonneveld2009nutrition,
+  title     = {Plant Nutrition of Greenhouse Crops},
+  author    = {Sonneveld, Cees and Voogt, Wim},
+  publisher = {Springer},
+  address   = {Dordrecht},
+  year      = {2009},
+  isbn      = {9789048125319},
+  doi       = {10.1007/978-90-481-2532-6},
+}
+
+% (4) Next Generation Growing / Het Nieuwe Telen, and its temperature-integration
+%     control logic.
+
+@inproceedings{degelder2012ngg,
+  title     = {A concept for reduced energy demand of greenhouses: the next generation greenhouse cultivation in the Netherlands},
+  author    = {de Gelder, Arie and Poot, Eric H. and Dieleman, Janneke A. and de Zwart, H. Feije},
+  booktitle = {Acta Horticulturae},
+  volume    = {952},
+  pages     = {539--544},
+  year      = {2012},
+  doi       = {10.17660/ActaHortic.2012.952.68},
+}
+
+@article{koerner2003tempintegration,
+  title   = {Design for an improved temperature integration concept in greenhouse cultivation},
+  author  = {K{\"o}rner, Oliver and Challa, Hugo},
+  journal = {Computers and Electronics in Agriculture},
+  volume  = {39},
+  number  = {1},
+  pages   = {39--59},
+  year    = {2003},
+  doi     = {10.1016/S0168-1699(03)00006-1},
+}
+
+% (5) Autonomous Greenhouse Challenge, 1st edition (cucumber) + released dataset.
+
+@article{hemming2019cucumber,
+  title   = {Remote control of greenhouse vegetable production with artificial intelligence---greenhouse climate, irrigation, and crop production},
+  author  = {Hemming, Silke and de Zwart, Feije and Elings, Anne and Righini, Isabella and Petropoulou, Anna},
+  journal = {Sensors},
+  volume  = {19},
+  number  = {8},
+  pages   = {1807},
+  year    = {2019},
+  doi     = {10.3390/s19081807},
+}
+
+@misc{hemming2019agcdataset,
+  title     = {Autonomous Greenhouse Challenge, First Edition (2018)},
+  author    = {Hemming, Silke and de Zwart, Feije and Elings, Anne and Righini, Isabella and Petropoulou, Anna},
+  year      = {2019},
+  publisher = {4TU.ResearchData},
+  doi       = {10.4121/uuid:e4987a7b-04dd-4c89-9b18-883aad30ba9a},
+  url       = {https://doi.org/10.4121/uuid:e4987a7b-04dd-4c89-9b18-883aad30ba9a},
+}
+
+% --- Paper 002 control-theory foundations pass: source-verified 2026-07-14. ---
+% Canonical control-theory anchors the manuscript names but did not cite: safety
+% filters (CBF + predictive), robust/tube MPC, recursive feasibility and MPC
+% stability, and economic-MPC stability. All CITED: authors, year, venue, and
+% id verified against primary records (IEEE Xplore / ScienceDirect / ECC DOI).
+% Same "VERIFIED = source confirmed, not claim-checked" convention as above.
+
+@inproceedings{ames2019cbf,
+  title     = {Control Barrier Functions: Theory and Applications},
+  author    = {Ames, Aaron D. and Coogan, Samuel and Egerstedt, Magnus and Notomista, Gennaro and Sreenath, Koushil and Tabuada, Paulo},
+  booktitle = {2019 18th European Control Conference (ECC)},
+  pages     = {3420--3431},
+  year      = {2019},
+  doi       = {10.23919/ECC.2019.8796030},
+}
+
+@article{wabersich2021safetyfilter,
+  title   = {A predictive safety filter for learning-based control of constrained nonlinear dynamical systems},
+  author  = {Wabersich, Kim P. and Zeilinger, Melanie N.},
+  journal = {Automatica},
+  volume  = {129},
+  pages   = {109597},
+  year    = {2021},
+  doi     = {10.1016/j.automatica.2021.109597},
+  eprint  = {1812.05506},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1812.05506},
+}
+
+@article{mayne2005tubempc,
+  title   = {Robust model predictive control of constrained linear systems with bounded disturbances},
+  author  = {Mayne, David Q. and Seron, Mar{\'i}a M. and Rakovi{\'c}, Sa{\v{s}}a V.},
+  journal = {Automatica},
+  volume  = {41},
+  number  = {2},
+  pages   = {219--224},
+  year    = {2005},
+  doi     = {10.1016/j.automatica.2004.08.019},
+}
+
+@article{mayne2014mpcpromise,
+  title   = {Model predictive control: Recent developments and future promise},
+  author  = {Mayne, David Q.},
+  journal = {Automatica},
+  volume  = {50},
+  number  = {12},
+  pages   = {2967--2986},
+  year    = {2014},
+  doi     = {10.1016/j.automatica.2014.10.128},
+}
+
+@article{mayne2000constrained,
+  title   = {Constrained model predictive control: Stability and optimality},
+  author  = {Mayne, David Q. and Rawlings, James B. and Rao, Christopher V. and Scokaert, Pierre O. M.},
+  journal = {Automatica},
+  volume  = {36},
+  number  = {6},
+  pages   = {789--814},
+  year    = {2000},
+  doi     = {10.1016/S0005-1098(99)00214-9},
+}
+
+@article{angeli2012economicmpc,
+  title   = {On average performance and stability of economic model predictive control},
+  author  = {Angeli, David and Amrit, Rishi and Rawlings, James B.},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {57},
+  number  = {7},
+  pages   = {1615--1626},
+  year    = {2012},
+  doi     = {10.1109/TAC.2011.2179349},
+}
+
+% --- Paper 002 taxonomy-antecedent pass: source-verified 2026-07-14. --------
+% The nearest prior taxonomy the survey contrasts against: informed ML's
+% "where prior knowledge enters an ML pipeline" map. Fields confirmed against
+% dblp, arXiv:1903.12394, and Semantic Scholar. Same "VERIFIED = source
+% confirmed, not claim-checked" convention as above.
+
+@article{vonrueden2023informed,
+  title   = {Informed Machine Learning---A Taxonomy and Survey of Integrating Prior Knowledge into Learning Systems},
+  author  = {von R{\"u}den, Laura and Mayer, Sebastian and Beckh, Katharina and Georgiev, Bogdan and Giesselbach, Sven and Heese, Raoul and Kirsch, Birgit and Pfrommer, Julius and Pick, Annika and Ramamurthy, Rajkumar and Walczak, Michal and Garcke, Jochen and Bauckhage, Christian and Schuecker, Jannis},
+  journal = {IEEE Transactions on Knowledge and Data Engineering},
+  volume  = {35},
+  number  = {1},
+  pages   = {614--633},
+  year    = {2023},
+  doi     = {10.1109/TKDE.2021.3079836},
+  eprint  = {1903.12394},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1903.12394},
+}
+
+% --- Paper 001 benchmark pass: source-verified 2026-07-14 by lit-scout web
+%     pass. Same "VERIFIED = source confirmed, not claim-checked" convention as
+%     above. These anchor the empirical data-efficiency/safety benchmark. ------
+
+@article{vanlaatum2026rlsmpc,
+  title   = {Stochastic model predictive control with reinforcement learning for greenhouse production systems under parametric uncertainty},
+  author  = {van Laatum, Bart and Msaad, Salim and van Henten, Eldert J. and McAllister, Robert D. and Boersma, Sjoerd},
+  journal = {Control Engineering Practice},
+  volume  = {169},
+  pages   = {106787},
+  year    = {2026},
+  doi     = {10.1016/j.conengprac.2026.106787},
+  url     = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5396503},
+}
+
+@article{yuan2022safecontrolgym,
+  title   = {safe-control-gym: A Unified Benchmark Suite for Safe Learning-Based Control and Reinforcement Learning in Robotics},
+  author  = {Yuan, Zhaocong and Hall, Adam W. and Zhou, Siqi and Brunke, Lukas and Greeff, Melissa and Panerati, Jacopo and Schoellig, Angela P.},
+  journal = {IEEE Robotics and Automation Letters},
+  volume  = {7},
+  number  = {4},
+  pages   = {11142--11149},
+  year    = {2022},
+  doi     = {10.1109/LRA.2022.3196132},
+  eprint  = {2109.06325},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2109.06325},
+}
+
+@inproceedings{deisenroth2011pilco,
+  title     = {PILCO: A Model-Based and Data-Efficient Approach to Policy Search},
+  author    = {Deisenroth, Marc Peter and Rasmussen, Carl Edward},
+  booktitle = {Proceedings of the 28th International Conference on Machine Learning (ICML)},
+  pages     = {465--472},
+  year      = {2011},
+  url       = {https://www.pair.toronto.edu/csc2621-w20/assets/slides/lec7_pilco.pdf},
+}
+
+@article{liu2021pimbrl,
+  title   = {Physics-informed Dyna-style model-based deep reinforcement learning for dynamic control},
+  author  = {Liu, Xin-Yang and Wang, Jian-Xun},
+  journal = {Proceedings of the Royal Society A},
+  volume  = {477},
+  number  = {2255},
+  pages   = {20210618},
+  year    = {2021},
+  doi     = {10.1098/rspa.2021.0618},
+  eprint  = {2108.00128},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2108.00128},
+}
+
+@techreport{ray2019safetygym,
+  title       = {Benchmarking Safe Exploration in Deep Reinforcement Learning},
+  author      = {Ray, Alex and Achiam, Joshua and Amodei, Dario},
+  institution = {OpenAI},
+  year        = {2019},
+  url         = {https://cdn.openai.com/safexp-short.pdf},
+}
+
+% --- Paper 001 related-work refresh: source-verified 2026-08-01 (citation-checker,
+%     promoted from STUDIED). Recent (2025-2026) RL+MPC-greenhouse and RL-greenhouse-
+%     energy work; context/compare entries, neither runs a multi-controller data-budget
+%     + mismatch benchmark, so 001's contribution is intact. -------------------
+@article{mallick2025rlmpc,
+  title   = {Reinforcement Learning-based Model Predictive Control for Greenhouse Climate Control},
+  author  = {Mallick, Samuel and Airaldi, Filippo and Dabiri, Azita and Sun, Congcong and De Schutter, Bart},
+  journal = {Smart Agricultural Technology},
+  volume  = {10},
+  pages   = {100751},
+  year    = {2025},
+  doi     = {10.1016/j.atech.2024.100751},
+  eprint  = {2409.12789},
+  archivePrefix = {arXiv},
+  url     = {https://doi.org/10.1016/j.atech.2024.100751},
+}
+
+@article{jang2026offlinerlgreenhouse,
+  title   = {Offline reinforcement learning for optimal control of a greenhouse with ground source heat pump},
+  author  = {Jang, Changwon and Kim, Dongwoo and Yun, Rin},
+  journal = {Energy},
+  volume  = {358},
+  pages   = {141404},
+  year    = {2026},
+  doi     = {10.1016/j.energy.2026.141404},
+  url     = {https://doi.org/10.1016/j.energy.2026.141404},
+}
+
+% --- Paper 001 software citation: verified 2026-10-11 (release page, README and
+%     CITATION.cff read directly; local checkout at ../phytotron). Phytotron is the
+%     maintained successor of 001's greenlight_bench, cited in the data-availability
+%     statement; it reproduces 001's incumbent (4/4 years) and NMPC 2025/m0 season
+%     exactly with math threads pinned, ships no RL policy and no RL-in-MPC arm. ----
+@misc{phytotron2026,
+  title        = {Phytotron: an open virtual phytotron for benchmarking greenhouse climate control},
+  author       = {{Growmatics B.V.}},
+  year         = {2026},
+  howpublished = {Software, version 0.1.0, released 2026-10-11, AGPL-3.0-or-later},
+  url          = {https://github.com/growmatics/phytotron},
+}
+
+% ===========================================================================
+% Studied sources and inspiration (reading log). Logged as we read; complete
+% the details before citing. See the two-tier note at the top of this file.
+% ===========================================================================
+
+@misc{sigrow_stomata_camera,
+  title        = {Stomata Camera: AI thermal imaging for crop-level transpiration and stress},
+  author       = {{Sigrow}},
+  howpublished = {\url{https://sigrow.com/solutions/stomata-camera/}},
+}
+
+@misc{cmuq_greenhouse5,
+  title        = {Greenhouse-5.0: AI and Robotics for Automated Data Collection, Analytics and Decision Support in Greenhouse Farming},
+  author       = {{Carnegie Mellon University Qatar} and Di Caro, Gianni},
+  howpublished = {\url{https://www.qatar.cmu.edu/projects/greenhouse-5-0-ai-robotics-for-automated-data-collection-analytics-and-decision-support-in-greenhouse-farming/}},
+}
+
+@article{satech_2025_S2772375525009013,
+  title   = {[STUDIED, UNVERIFIED: confirm title]},
+  author  = {[confirm authors]},
+  journal = {Smart Agricultural Technology},
+  year    = {2025},
+  url     = {https://www.sciencedirect.com/science/article/pii/S2772375525009013},
+}
+
+% --- Studied for paper 002 (survey): title/venue VERIFIED 2026-07-13, author
+%     list not yet confirmed. Complete authors before citing. ---
+
+@article{agri_digitaltwin_review_2025,
+  title   = {Agricultural digital twin for smart farming: A review},
+  author  = {[STUDIED, UNVERIFIED: confirm author list]},
+  year    = {2025},
+  url     = {https://www.sciencedirect.com/science/article/pii/S2949736125001332},
+}
+
+@article{horticulturae2026growth,
+  title   = {Growth Simulation Model and Intelligent Management System of Horticultural Crops: Methods, Decisions, and Prospects},
+  author  = {[STUDIED, UNVERIFIED: confirm author list]},
+  journal = {Horticulturae},
+  volume  = {12},
+  number  = {2},
+  pages   = {139},
+  year    = {2026},
+}
+
+@article{cnnlstm2026tomato,
+  title   = {A mechanistic structure-based hybrid CNN-LSTM model for greenhouse tomato yield prediction},
+  author  = {[STUDIED, UNVERIFIED: confirm author list]},
+  journal = {Smart Agricultural Technology},
+  year    = {2026},
+  url     = {https://www.sciencedirect.com/science/article/pii/S2772375526000419},
+}
+
+@article{hybridplant2025cea,
+  title   = {Hybrid Plant Growth: Integrating Stochastic, Empirical, and Optimization Models with Machine Learning for Controlled Environment Agriculture},
+  author  = {[STUDIED, UNVERIFIED: confirm author list]},
+  journal = {Agronomy},
+  volume  = {15},
+  number  = {1},
+  pages   = {189},
+  year    = {2025},
+}
+
+@article{dt_energy_2026,
+  title   = {Advancing Digital Twin development for Controlled-Environment Agriculture: Comparative evaluation of two greenhouse energy models and their readiness for digital twin implementation},
+  author  = {[STUDIED, UNVERIFIED: confirm author list]},
+  journal = {Smart Agricultural Technology},
+  year    = {2026},
+  url     = {https://www.sciencedirect.com/science/article/pii/S2772375526002327},
+}
+
+% --- Studied for paper 002 coverage-expansion sweep (2026-07-13 b):
+%     source located but a field (usually the author list) not yet confirmed.
+%     Complete before citing. ---
+
+@article{vanhenten2003sensitivity,
+  title   = {Sensitivity analysis of an optimal control problem in greenhouse climate management},
+  author  = {van Henten, Eldert J.},
+  journal = {Biosystems Engineering},
+  year    = {2003},
+}
+
+@inproceedings{tap1996receding,
+  title     = {Receding horizon optimal control of greenhouse climate based on the lazy man weather prediction},
+  author    = {Tap, R. F. and van Straten, G. and van Willigenburg, L. G.},
+  booktitle = {IFAC Proceedings Volumes},
+  url       = {https://www.sciencedirect.com/science/article/pii/S1474667017577769},
+}
+
+@article{adaptive2017twotimescale,
+  title   = {Adaptive two time-scale receding horizon optimal control for greenhouse lettuce cultivation},
+  author  = {[STUDIED, UNVERIFIED: confirm author list]},
+  journal = {Computers and Electronics in Agriculture},
+  year    = {2017},
+  url     = {https://www.sciencedirect.com/science/article/abs/pii/S0168169917310347},
+}
+
+@article{katzin2021ledenergy,
+  title   = {Energy savings in greenhouses by transition from high-pressure sodium to LED lighting},
+  author  = {Katzin, David and Marcelis, Leo F. M. and van Mourik, Simon},
+  journal = {Applied Energy},
+  volume  = {281},
+  pages   = {116019},
+  year    = {2021},
+  doi     = {10.1016/j.apenergy.2020.116019},
+}
+
+@article{ddmpc_irrigation_co2_2025,
+  title   = {Data-driven model predictive control for irrigation management in agricultural greenhouses under CO2 enrichment},
+  author  = {[STUDIED, UNVERIFIED: confirm author list]},
+  journal = {Smart Agricultural Technology},
+  year    = {2025},
+  url     = {https://www.sciencedirect.com/science/article/pii/S2772375525003041},
+}
+
+@article{enppo_irrigation_2025,
+  title   = {Reinforcement learning control method for greenhouse vegetable irrigation driven by dynamic clipping and negative incentive mechanism},
+  author  = {[STUDIED, UNVERIFIED: confirm author list]},
+  journal = {Frontiers in Plant Science},
+  volume  = {16},
+  year    = {2025},
+  url     = {https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2025.1632431/full},
+}
+
+@article{diffusion_rl_greenhouse_2026,
+  title   = {Energy-efficient greenhouse climate control with diffusion reinforcement learning},
+  author  = {[STUDIED, UNVERIFIED: confirm author list; You group]},
+  journal = {Applied Energy},
+  year    = {2026},
+  url     = {https://www.sciencedirect.com/science/article/abs/pii/S0306261926000899},
+}
+
+@misc{soumo2025bilstm,
+  title  = {Data-Driven Greenhouse Climate Regulation in Lettuce Cultivation Using BiLSTM and GRU Predictive Control},
+  author = {Soumo, Emmanuel Arnaud and Calisti, Marcello and Polydoros, Athanasios},
+  year   = {2025},
+  eprint = {2507.21669},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2507.21669},
+}
+
+@article{global_setpoint_opt_2025,
+  title   = {Global Optimization and Control of Greenhouse Climate Setpoints for Energy Saving and Crop Yield Increase},
+  author  = {[STUDIED, UNVERIFIED: confirm author list]},
+  journal = {Agriculture},
+  volume  = {15},
+  number  = {9},
+  pages   = {939},
+  year    = {2025},
+  doi     = {10.3390/agriculture15090939},
+}
+
+@article{tcddpg_hvac_2025,
+  title   = {A Physics-Informed Reinforcement Learning Framework for HVAC Optimization: Thermodynamically-Constrained Deep Deterministic Policy Gradients with Simulation-Based Validation},
+  author  = {[STUDIED, UNVERIFIED: MDPI page returned HTTP 403; confirm authors]},
+  journal = {Energies},
+  volume  = {18},
+  number  = {23},
+  pages   = {6310},
+  year    = {2025},
+  doi     = {10.3390/en18236310},
+}
+
+@article{physicsguided_cropyield_2025,
+  title   = {Physics-guided deep learning for crop yield estimation},
+  author  = {[STUDIED, UNVERIFIED: confirm author list]},
+  journal = {European Journal of Agronomy},
+  year    = {2025},
+  url     = {https://www.sciencedirect.com/science/article/abs/pii/S1161030125003466},
+}
+
+@misc{pinn_cropyieldloss_2025,
+  title  = {Exploring Physics-Informed Neural Networks for Crop Yield Loss Forecasting},
+  author = {[STUDIED, UNVERIFIED: confirm author list]},
+  year   = {2025},
+  eprint = {2501.00502},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2501.00502},
+}
+
+% --- Studied for paper 001 (novelty-scout, 2026-07-14): adjacent-domain
+%     physics-informed-RL control benchmarks. Nearest analogues OUTSIDE CEA;
+%     they establish the four-way / data-efficiency framing is done elsewhere,
+%     not on a greenhouse simulator. Complete author lists before any citation.
+
+@misc{physq2022building,
+  title  = {PhysQ: A Physics Informed Reinforcement Learning Framework for Building Control},
+  author = {[STUDIED, UNVERIFIED: confirm author list]},
+  year   = {2022},
+  eprint = {2211.11830},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2211.11830},
+}
+
+@misc{koopman_enmpc_2025,
+  title  = {Sample-Efficient Reinforcement Learning of Koopman eNMPC},
+  author = {[STUDIED, UNVERIFIED: confirm author list]},
+  year   = {2025},
+  eprint = {2503.18787},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2503.18787},
+}
+
+@misc{ramesh2023pimbrl,
+  title  = {Physics-Informed Model-Based Reinforcement Learning},
+  author = {Ramesh, Adithya and Ravindran, Balaraman},
+  year   = {2023},
+  eprint = {2212.02179},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2212.02179},
+}
+
+
+% --- Optimization/solver tooling for the paper 001 MPC arm (studied 2026-07-15) ---
+@article{andersson2019casadi,
+  title   = {{CasADi}: a software framework for nonlinear optimization and optimal control},
+  author  = {Andersson, Joel A. E. and Gillis, Joris and Horn, Greg and Rawlings, James B. and Diehl, Moritz},
+  journal = {Mathematical Programming Computation},
+  volume  = {11},
+  number  = {1},
+  pages   = {1--36},
+  year    = {2019},
+  doi     = {10.1007/s12532-018-0139-4},
+  url     = {https://doi.org/10.1007/s12532-018-0139-4},
+}
+
+@article{wachter2006ipopt,
+  title   = {On the implementation of an interior-point filter line-search algorithm for large-scale nonlinear programming},
+  author  = {W{\"a}chter, Andreas and Biegler, Lorenz T.},
+  journal = {Mathematical Programming},
+  volume  = {106},
+  number  = {1},
+  pages   = {25--57},
+  year    = {2006},
+  doi     = {10.1007/s10107-004-0559-y},
+  url     = {https://doi.org/10.1007/s10107-004-0559-y},
+}
+
+@misc{hsl,
+  title  = {{HSL}: A collection of {Fortran} codes for large scale scientific computation},
+  author = {{STFC Rutherford Appleton Laboratory}},
+  year   = {2024},
+  url    = {https://www.hsl.rl.ac.uk/},
+}
+
+
+% --- Studied for the proposed paper ~007 (novelty-scout, 2026-07-16):
+%     price-aware / demand-response control for greenhouses and adjacent
+%     building-HVAC. These establish that DYNAMIC-PRICE-AWARE / load-shifting
+%     control is well-trodden (concept is prior art); the untouched slice is the
+%     GreenLight-Gym2 differentiable-benchmark instantiation with a crop-health
+%     feasibility gate and an honest mismatch/weather-year robustness study.
+%     Complete author lists before any citation.
+
+@inproceedings{sorensen2016dynagrow,
+  title     = {{DynaGrow} -- Multi-Objective Optimization for Energy Cost-efficient Control of Supplemental Light in Greenhouses},
+  author    = {S{\o}rensen, Jan Corfixen and Kjaer, Katrine Heinsvig and Ottosen, Carl-Otto and J{\o}rgensen, Bo N{\o}rregaard},
+  booktitle = {Proceedings of the 8th International Joint Conference on Computational Intelligence (IJCCI 2016)},
+  publisher = {SciTePress},
+  pages     = {41--48},
+  year      = {2016},
+  doi       = {10.5220/0006047500410048},
+  url       = {https://www.scitepress.org/PublishedPapers/2016/60475/60475.pdf},
+}
+
+@misc{indoorfarming2025mpc,
+  title  = {Optimal Energy Management in Indoor Farming Using Lighting Flexibility and Intelligent Model Predictive Control},
+  author = {Abbaspour, Mohammadjavad and Shukla, Mukund R. and Saxena, Praveen K. and Saxena, Shivam},
+  year   = {2025},
+  eprint = {2510.03686},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2510.03686},
+}
+
+@article{dam_dli_lighting_2022,
+  title   = {A greenhouse daily light integral control algorithm that takes advantage of day ahead market electricity pricing},
+  author  = {Shelford, Timothy and Both, Arend-Jan and Mattson, Neil S.},
+  journal = {Acta Horticulturae},
+  volume  = {1337},
+  pages   = {277--282},
+  year    = {2022},
+  doi     = {10.17660/ActaHortic.2022.1337.37},
+  url     = {https://doi.org/10.17660/ActaHortic.2022.1337.37},
+}
+
+@article{networked_greenhouse_madrl_2023,
+  title   = {Energy management for demand response in networked greenhouses with multi-agent deep reinforcement learning},
+  author  = {Ajagekar, Akshay and Decardi-Nelson, Benjamin and You, Fengqi},
+  journal = {Applied Energy},
+  volume  = {355},
+  pages   = {122349},
+  year    = {2024},
+  doi     = {10.1016/j.apenergy.2023.122349},
+  url     = {https://www.sciencedirect.com/science/article/abs/pii/S0306261923017130},
+}
+
+@article{greenhouse_smartgrid_flex_2025,
+  title   = {An optimization framework to response flexible energy demand based on target market in a smart grid: A case study of greenhouses},
+  author  = {Salehi Shahrabi, Mehran},
+  journal = {Sustainable Computing: Informatics and Systems},
+  volume  = {47},
+  pages   = {101163},
+  year    = {2025},
+  doi     = {10.1016/j.suscom.2025.101163},
+  url     = {https://www.sciencedirect.com/science/article/abs/pii/S2210537925000848},
+}
+
+@article{hvac_dr_mpc_rtp_2013,
+  title   = {Model predictive {HVAC} load control in buildings using real-time electricity pricing},
+  author  = {Avci, Mesut and Erkoc, Murat and Rahmani, Amir and Asfour, Shihab},
+  journal = {Energy and Buildings},
+  volume  = {60},
+  pages   = {199--209},
+  year    = {2013},
+  doi     = {10.1016/j.enbuild.2013.01.008},
+  url     = {https://www.sciencedirect.com/science/article/abs/pii/S037877881300025X},
+}
+
+@misc{entsoe2015transparency,
+  title  = {{ENTSO-E} Transparency Platform},
+  author = {{ENTSO-E}},
+  year   = {2015},
+  url    = {https://transparency.entsoe.eu/},
+}
+
+% ---- Studied 2026-07-18 (paper 001 DD: is SAC a defensible off-policy baseline?)
+%      Modern continuous-control RL; web-verified arXiv ids; none used in CEA to date. ----
+
+@inproceedings{kuznetsov2020tqc,
+  author = {Kuznetsov, Arsenii and Shvechikov, Pavel and Grishin, Alexander and Vetrov, Dmitry},
+  title  = {Controlling Overestimation Bias with Truncated Mixture of Continuous Distributional Quantile Critics},
+  year   = {2020},
+  booktitle = {Proceedings of the 37th International Conference on Machine Learning (ICML)},
+  url    = {https://arxiv.org/abs/2005.04269},
+}
+
+@inproceedings{bhatt2024crossq,
+  author = {Bhatt, Aditya and Palenicek, Daniel and Belousov, Boris and Argus, Max and Amiranashvili, Artemij and Brox, Thomas and Peters, Jan},
+  title  = {CrossQ: Batch Normalization in Deep Reinforcement Learning for Greater Sample Efficiency and Simplicity},
+  year   = {2024},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  url    = {https://openreview.net/forum?id=PczQtTsTIX},
+}
+
+@article{fujimoto2023td7,
+  author = {Fujimoto, Scott and Chang, Wei-Di and Smith, Edward J. and Gu, Shixiang Shane and Precup, Doina and Meger, David},
+  title  = {For SALE: State-Action Representation Learning for Deep Reinforcement Learning},
+  year   = {2023},
+  journal = {Advances in Neural Information Processing Systems 36 (NeurIPS)},
+  url    = {https://arxiv.org/abs/2306.02451},
+}
+
+@article{nauman2024bro,
+  author = {Nauman, Michal and Ostaszewski, Mateusz and Jankowski, Krzysztof and Mi{\l}o{\'s}, Piotr and Cygan, Marek},
+  title  = {Bigger, Regularized, Optimistic: scaling for compute and sample-efficient continuous control},
+  year   = {2024},
+  journal = {Advances in Neural Information Processing Systems 37 (NeurIPS), spotlight},
+  url    = {https://arxiv.org/abs/2405.16158},
+}
+
+@article{lee2025simbav2,
+  author = {Lee, Hojoon and others},
+  title  = {Hyperspherical Normalization for Scalable Deep Reinforcement Learning},
+  year   = {2025},
+  journal = {Proceedings of the 42nd International Conference on Machine Learning (ICML), spotlight},
+  url    = {https://arxiv.org/abs/2502.15280},
+}
+
+@article{fujimoto2025mrq,
+  author = {Fujimoto, Scott and D'Oro, Pierluca and Zhang, Amy and Tian, Yuandong and Rabbat, Michael},
+  title  = {Towards General-Purpose Model-Free Reinforcement Learning},
+  year   = {2025},
+  journal = {International Conference on Learning Representations (ICLR)},
+  url    = {https://arxiv.org/abs/2501.16142},
+}
+
+@misc{raffin2026sota,
+  author = {Raffin, Antonin},
+  title  = {Recent Advances in RL for Continuous Control (SOTA Early 2026)},
+  year   = {2026},
+  howpublished = {\url{https://araffin.github.io/slides/advances-rl-sota-2026/}},
+}
+
+% Also studied in the same DD, ruled out for the benchmark without full entries:
+% REDQ (arXiv 2101.05982, ICLR 2021; 10-critic ensemble, UTD 20 - compute-infeasible on CPU),
+% DroQ (arXiv 2110.02034, ICLR 2022; REDQ efficiency at SAC per-update cost but UTD 20; in sbx not SB3),
+% SimBa (arXiv 2410.09754, ICLR 2025; superseded by SimbaV2),
+% FastTD3 (arXiv 2505.22642; premised on massively parallel GPU sim),
+% REPPO (arXiv 2507.11019; GPU-parallelized on-policy),
+% TD-MPC2 (arXiv 2310.16828, ICLR 2024) and DreamerV3 (arXiv 2301.04104, Nature 2025):
+%   model-based, GPU-scale, and redundant with the benchmark's explicit-physics MPC arms.
+
+% ---- added 2026-07-17 (paper 001 manuscript DD): algorithms, tools, statistics ----
+
+@article{schulman2017ppo,
+  author = {Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg},
+  title  = {Proximal Policy Optimization Algorithms},
+  year   = {2017},
+  journal = {arXiv preprint arXiv:1707.06347},
+  url    = {https://arxiv.org/abs/1707.06347},
+}
+
+@inproceedings{haarnoja2018sac,
+  author = {Haarnoja, Tuomas and Zhou, Aurick and Abbeel, Pieter and Levine, Sergey},
+  title  = {Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor},
+  year   = {2018},
+  booktitle = {Proceedings of the 35th International Conference on Machine Learning (ICML)},
+  pages  = {1861--1870},
+  url    = {https://arxiv.org/abs/1801.01290},
+}
+
+@article{haarnoja2018sacapps,
+  author = {Haarnoja, Tuomas and Zhou, Aurick and Hartikainen, Kristian and Tucker, George and Ha, Sehoon and Tan, Jie and Kumar, Vikash and Zhu, Henry and Gupta, Abhishek and Abbeel, Pieter and Levine, Sergey},
+  title  = {Soft Actor-Critic Algorithms and Applications},
+  year   = {2018},
+  journal = {arXiv preprint arXiv:1812.05905},
+  url    = {https://arxiv.org/abs/1812.05905},
+}
+
+@article{raffin2021sb3,
+  author = {Raffin, Antonin and Hill, Ashley and Gleave, Adam and Kanervisto, Anssi and Ernestus, Maximilian and Dormann, Noah},
+  title  = {Stable-Baselines3: Reliable Reinforcement Learning Implementations},
+  year   = {2021},
+  journal = {Journal of Machine Learning Research},
+  volume = {22},
+  number = {268},
+  pages  = {1--8},
+  url    = {http://jmlr.org/papers/v22/20-1364.html},
+}
+
+@article{clopper1934,
+  author = {Clopper, C. J. and Pearson, E. S.},
+  title  = {The Use of Confidence or Fiducial Limits Illustrated in the Case of the Binomial},
+  year   = {1934},
+  journal = {Biometrika},
+  volume = {26},
+  number = {4},
+  pages  = {404--413},
+  doi    = {10.1093/biomet/26.4.404},
+}
+
+@article{hindmarsh2005sundials,
+  author = {Hindmarsh, Alan C. and Brown, Peter N. and Grant, Keith E. and Lee, Steven L. and Serban, Radu and Shumaker, Dan E. and Woodward, Carol S.},
+  title  = {{SUNDIALS}: Suite of Nonlinear and Differential/Algebraic Equation Solvers},
+  year   = {2005},
+  journal = {ACM Transactions on Mathematical Software},
+  volume = {31},
+  number = {3},
+  pages  = {363--396},
+  doi    = {10.1145/1089014.1089020},
+}
+
+@article{efron1979bootstrap,
+  author = {Efron, B.},
+  title  = {Bootstrap Methods: Another Look at the Jackknife},
+  year   = {1979},
+  journal = {The Annals of Statistics},
+  volume = {7},
+  number = {1},
+  pages  = {1--26},
+  doi    = {10.1214/aos/1176344552},
+}
+
+% --- Extended for paper 007 (lit-scout, 2026-07-16): the Wageningen economic /
+%     energy-optimal control line, CEA load-shifting, and building-DR-MPC anchors.
+%     Confirms the dynamic-price-aware CEA-control concept is well established and
+%     single-scenario; none of these run on a public differentiable crop-climate
+%     benchmark with a crop-health feasibility gate and a mismatch/weather-year
+%     robustness study. That combination is 007's open slot.
+
+@article{vanbeveren2015optimal,
+  title   = {Optimal control of greenhouse climate using minimal energy and grower defined bounds},
+  author  = {van Beveren, P. J. M. and Bontsema, J. and van Straten, G. and van Henten, E. J.},
+  journal = {Applied Energy},
+  volume  = {159},
+  pages   = {509--519},
+  year    = {2015},
+  doi     = {10.1016/j.apenergy.2015.09.012},
+}
+
+@article{kuijpers2021lighting,
+  title   = {Lighting systems and strategies compared in an optimally controlled greenhouse},
+  author  = {Kuijpers, W. J. P. and Katzin, D. and van Mourik, S. and Antunes, D. J. and Hemming, S. and van de Molengraft, M. J. G.},
+  journal = {Biosystems Engineering},
+  volume  = {202},
+  pages   = {195--216},
+  year    = {2021},
+  doi     = {10.1016/j.biosystemseng.2020.12.006},
+}
+
+@article{lin2021venlompc,
+  title   = {Model predictive control of a {Venlo}-type greenhouse system considering electrical energy, water and carbon dioxide consumption},
+  author  = {Lin, Dong and Zhang, Lijun and Xia, Xiaohua},
+  journal = {Applied Energy},
+  volume  = {298},
+  pages   = {117163},
+  year    = {2021},
+  doi     = {10.1016/j.apenergy.2021.117163},
+}
+
+@article{avgoustaki2021loadshifting,
+  title   = {Energy cost reduction by shifting electricity demand in indoor vertical farms with artificial lighting},
+  author  = {Avgoustaki, Dafni Despoina and Xydis, George},
+  journal = {Biosystems Engineering},
+  volume  = {211},
+  pages   = {219--229},
+  year    = {2021},
+  doi     = {10.1016/j.biosystemseng.2021.09.006},
+}
+
+@inproceedings{oldewurtel2010rtpmpc,
+  title     = {Reducing peak electricity demand in building climate control using real-time pricing and model predictive control},
+  author    = {Oldewurtel, Frauke and Ulbig, Andreas and Parisio, Alessandra and Andersson, G{\"o}ran and Morari, Manfred},
+  booktitle = {49th IEEE Conference on Decision and Control (CDC)},
+  pages     = {1927--1932},
+  year      = {2010},
+  doi       = {10.1109/CDC.2010.5717458},
+}
+
+@article{hvac_field_demo_2025,
+  title   = {Commercial building {HVAC} demand flexibility with model predictive control: Field demonstration and literature insights},
+  author  = {Zanetti, Ettore and Blum, David H. and Fu, Hongxiang and Weyandt, Christopher and Pritoni, Marco and Piette, Mary Ann},
+  journal = {Energy and Buildings},
+  volume  = {345},
+  pages   = {116097},
+  year    = {2025},
+  doi     = {10.1016/j.enbuild.2025.116097},
+  url     = {https://www.sciencedirect.com/science/article/pii/S0378778825008278},
+}
+
+@article{adaptiverobust2025greenhouse,
+  title   = {Adaptive robust greenhouse climate control: Combining deep reinforcement learning and economic optimization},
+  author  = {Mansour, Mohamed and Sathyanarayanan, Kiran Kumar and Sauerteig, Philipp and Streif, Stefan},
+  journal = {Smart Agricultural Technology},
+  volume  = {12},
+  pages   = {101327},
+  year    = {2025},
+  doi     = {10.1016/j.atech.2025.101327},
+  url     = {https://www.sciencedirect.com/science/article/pii/S2772375525005581},
+}
+
+% --- Studied for paper 001 generalization arc (lit-scout, 2026-07-23): the
+%     cross-field "short-horizon planning + learned long-horizon value function"
+%     structure that our RL-in-MPC hybrid instantiates for greenhouse economic
+%     control. Three buckets: games (shallow search + value net), robotics
+%     value-guided MPC (short-horizon MPC + learned terminal value), and OR/ADP
+%     (the unification: MPC = rollout with a terminal cost/value approximation).
+%     Author/year/venue/DOI web-verified 2026-07-23; kept STUDIED pending a
+%     citation-checker pass before final submission. Long author lists on the
+%     Nature/Science papers give the lead authors + "and others"; confirm the
+%     full ordering at proof.
+
+% Bucket 1: games -- shallow tree search with a learned value network at the leaves.
+@article{silver2016alphago,
+  author  = {Silver, David and Huang, Aja and Maddison, Chris J. and Guez, Arthur and Sifre, Laurent and van den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and others},
+  title   = {Mastering the game of {Go} with deep neural networks and tree search},
+  journal = {Nature},
+  volume  = {529},
+  number  = {7587},
+  pages   = {484--489},
+  year    = {2016},
+  doi     = {10.1038/nature16961},
+}
+
+@article{silver2017alphagozero,
+  author  = {Silver, David and Schrittwieser, Julian and Simonyan, Karen and Antonoglou, Ioannis and Huang, Aja and Guez, Arthur and Hubert, Thomas and Baker, Lucas and others},
+  title   = {Mastering the game of {Go} without human knowledge},
+  journal = {Nature},
+  volume  = {550},
+  number  = {7676},
+  pages   = {354--359},
+  year    = {2017},
+  doi     = {10.1038/nature24270},
+}
+
+@article{silver2018alphazero,
+  author  = {Silver, David and Hubert, Thomas and Schrittwieser, Julian and Antonoglou, Ioannis and Lai, Matthew and Guez, Arthur and Lanctot, Marc and Sifre, Laurent and Kumaran, Dharshan and Graepel, Thore and Lillicrap, Timothy and Simonyan, Karen and Hassabis, Demis},
+  title   = {A general reinforcement learning algorithm that masters chess, shogi, and {Go} through self-play},
+  journal = {Science},
+  volume  = {362},
+  number  = {6419},
+  pages   = {1140--1144},
+  year    = {2018},
+  doi     = {10.1126/science.aar6404},
+}
+
+@article{schrittwieser2020muzero,
+  author  = {Schrittwieser, Julian and Antonoglou, Ioannis and Hubert, Thomas and Simonyan, Karen and Sifre, Laurent and Schmitt, Simon and Guez, Arthur and Lockhart, Edward and Hassabis, Demis and Graepel, Thore and Lillicrap, Timothy and Silver, David},
+  title   = {Mastering {Atari}, {Go}, chess and shogi by planning with a learned model},
+  journal = {Nature},
+  volume  = {588},
+  number  = {7839},
+  pages   = {604--609},
+  year    = {2020},
+  doi     = {10.1038/s41586-020-03051-4},
+}
+
+% Bucket 2: robotics / continuous control -- short-horizon MPC + a learned terminal value.
+@inproceedings{hansen2022tdmpc,
+  author    = {Hansen, Nicklas and Wang, Xiaolong and Su, Hao},
+  title     = {Temporal Difference Learning for Model Predictive Control},
+  booktitle = {Proceedings of the 39th International Conference on Machine Learning (ICML)},
+  year      = {2022},
+  eprint    = {2203.04955},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2203.04955},
+}
+
+@inproceedings{hansen2024tdmpc2,
+  author    = {Hansen, Nicklas and Su, Hao and Wang, Xiaolong},
+  title     = {{TD-MPC2}: Scalable, Robust World Models for Continuous Control},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2024},
+  eprint    = {2310.16828},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2310.16828},
+}
+
+@inproceedings{lowrey2019polo,
+  author    = {Lowrey, Kendall and Rajeswaran, Aravind and Kakade, Sham and Todorov, Emanuel and Mordatch, Igor},
+  title     = {Plan Online, Learn Offline: Efficient Learning and Exploration via Model-Based Control},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2019},
+  eprint    = {1811.01848},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/1811.01848},
+}
+
+@inproceedings{bhardwaj2021blending,
+  author    = {Bhardwaj, Mohak and Choudhury, Sanjiban and Boots, Byron},
+  title     = {Blending {MPC} \& Value Function Approximation for Efficient Reinforcement Learning},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2021},
+  eprint    = {2012.05909},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2012.05909},
+}
+
+% Bucket 3: operations research / approximate dynamic programming -- the unification.
+@book{bertsekas2019rloptimalcontrol,
+  author    = {Bertsekas, Dimitri P.},
+  title     = {Reinforcement Learning and Optimal Control},
+  publisher = {Athena Scientific},
+  address   = {Belmont, MA},
+  year      = {2019},
+  isbn      = {978-1-886529-39-7},
+}
+
+@book{bellman1957dp,
+  author    = {Bellman, Richard},
+  title     = {Dynamic Programming},
+  publisher = {Princeton University Press},
+  address   = {Princeton, NJ},
+  year      = {1957},
+}
+
+@book{suttonbarto2018rl,
+  author    = {Sutton, Richard S. and Barto, Andrew G.},
+  title     = {Reinforcement Learning: An Introduction},
+  edition   = {2nd},
+  publisher = {MIT Press},
+  address   = {Cambridge, MA},
+  year      = {2018},
+  isbn      = {978-0-262-03924-6},
+}
+
+% --- Studied for paper 007 landscape refresh (lit-scout, 2026-08-21): the paper's
+%     final framing (information ladder level-vs-shape, four evaluation controls,
+%     pre-registration) needs four new literature legs the July sweep did not cover:
+%     (a) value-of-price-forecast to a flexible load, (b) DR baseline/M&V gaming and
+%     placebo calibration (the neighbour of our null-controller control), (c) the
+%     tariff-economics level/shape precedent, (d) pre-registration in ML. Sweep
+%     re-confirmed 2026-08-21: still no published price-aware or DR work on
+%     GreenLight-Gym / GreenLight-Gym2, and no controller-side level-vs-shape
+%     information ablation found anywhere. ----
+
+@article{borenstein2005rtp,
+  author  = {Borenstein, Severin},
+  title   = {The Long-Run Efficiency of Real-Time Electricity Pricing},
+  journal = {The Energy Journal},
+  volume  = {26},
+  number  = {3},
+  pages   = {93--116},
+  year    = {2005},
+  doi     = {10.5547/ISSN0195-6574-EJ-Vol26-No3-5},
+}
+
+@article{zareipour2010fiei,
+  author  = {Zareipour, Hamidreza and Ca{\~n}izares, Claudio A. and Bhattacharya, Kankar},
+  title   = {Economic Impact of Electricity Market Price Forecasting Errors: A Demand-Side Analysis},
+  journal = {IEEE Transactions on Power Systems},
+  volume  = {25},
+  number  = {1},
+  pages   = {254--262},
+  year    = {2010},
+  doi     = {10.1109/TPWRS.2009.2030380},
+}
+
+@misc{hornek2025intraday,
+  author = {Hornek, Timoth{\'e}e and Lee, Youngsub and Potenciano Menci, Sergio and Pavi{\'c}, Ivan},
+  title  = {The Value of Battery Energy Storage in the Continuous Intraday Market: Forecast vs. Perfect Foresight Strategies},
+  year   = {2025},
+  eprint = {2501.07121},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2501.07121},
+}
+
+@article{oldewurtel2012weathermpc,
+  author  = {Oldewurtel, Frauke and Parisio, Alessandra and Jones, Colin N. and Gyalistras, Dimitrios and Gwerder, Markus and Stauch, Vanessa and Lehmann, Beat and Morari, Manfred},
+  title   = {Use of model predictive control and weather forecasts for energy efficient building climate control},
+  journal = {Energy and Buildings},
+  volume  = {45},
+  pages   = {15--27},
+  year    = {2012},
+  doi     = {10.1016/j.enbuild.2011.09.022},
+}
+
+@misc{ellman2019baselines,
+  author = {Ellman, Douglas and Xiao, Yuanzhang},
+  title  = {Model Predictive Control-Based Battery Scheduling and Incentives to Manipulate Demand Response Baselines},
+  year   = {2019},
+  eprint = {1909.12349},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/1909.12349},
+}
+
+@misc{wang2020baselinemanip,
+  author = {Wang, Xiaochu and Tang, Wenyuan},
+  title  = {Analysis and Evaluation of Baseline Manipulation in Demand Response Programs},
+  year   = {2020},
+  eprint = {2011.10681},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2011.10681},
+}
+
+@article{gabaldon2021cbl,
+  author  = {Gabald{\'o}n, Antonio and Garc{\'i}a-Garre, Ana and Ruiz-Abell{\'o}n, Mar{\'i}a Carmen and Guillam{\'o}n, Antonio and {\'A}lvarez-Bel, Carlos and Fernandez-Jimenez, Luis Alfredo},
+  title   = {Improvement of customer baselines for the evaluation of demand response through the use of physically-based load models},
+  journal = {Utilities Policy},
+  volume  = {70},
+  pages   = {101213},
+  year    = {2021},
+  doi     = {10.1016/j.jup.2021.101213},
+}
+
+@proceedings{bertinetto2020prereg,
+  editor    = {Bertinetto, Luca and Henriques, Jo{\~a}o F. and Albanie, Samuel and Paganini, Michela and Varol, G{\"u}l},
+  title     = {NeurIPS 2020 Workshop on Pre-registration in Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {148},
+  publisher = {PMLR},
+  year      = {2021},
+  url       = {https://proceedings.mlr.press/v148/},
+}
+
+@misc{hofman2023prereg,
+  author = {Hofman, Jake M. and Chatzimparmpas, Angelos and Sharma, Amit and Watts, Duncan J. and Hullman, Jessica},
+  title  = {Pre-registration for Predictive Modeling},
+  year   = {2023},
+  eprint = {2311.18807},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2311.18807},
+}
+
+@article{mosharafian2021lighting,
+  author  = {Mosharafian, Sahand and Afzali, Shirin and Weaver, Geoffrey M. and van Iersel, Marc and Mohammadpour Velni, Javad},
+  title   = {Optimal lighting control in greenhouse by incorporating sunlight prediction},
+  journal = {Computers and Electronics in Agriculture},
+  volume  = {188},
+  pages   = {106300},
+  year    = {2021},
+  doi     = {10.1016/j.compag.2021.106300},
+}
+
+@misc{sievers2026synthcontrol,
+  author = {Sievers, Jonas and Roozbehani, Mardavij},
+  title  = {A Generalized Synthetic Control Method for Baseline Estimation in Demand Response Services},
+  year   = {2026},
+  eprint = {2604.18469},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2604.18469},
+}
+
+@article{ahp_mpc_greenhouse_2025,
+  title   = {Greenhouse Climate Control at the Food--Water--Energy Nexus: An Analytic Hierarchy Process--Model Predictive Control (AHP--MPC) Approach},
+  author  = {Benzzine, Hamza and Labrim, Hicham and El Aouni, Ibtissam and Bajit, Abderrahim and Saad, Aouatif and Zejli, Driss and El Bouayadi, Rachid},
+  journal = {Energies},
+  volume  = {18},
+  number  = {23},
+  pages   = {6219},
+  year    = {2025},
+  doi     = {10.3390/en18236219},
+  url     = {https://doi.org/10.3390/en18236219},
+}
+
+% --- Studied for paper 007 final citation pass (citation-checker, 2026-08-21):
+%     the manuscript's two remaining TODO-cite markers. (a) Section 4.4 needs the
+%     "MPC savings partly bought by the feasible set / an unfair baseline" hazard
+%     class documented in building-climate MPC (talib2025overratedmpc +
+%     huang2024mpcoverlooked). (b) Section 4.6 needs the storage-arbitrage
+%     end-effect / terminal-SoC-accounting precedent (sioshansi2009pjm +
+%     ikonen2023endeffect). ----
+
+@article{talib2025overratedmpc,
+  author  = {Talib, Abu and Joe, Jaewan},
+  title   = {Analyzing the overrated performance of model-based predictive control and energy saving strategies in building energy management: A review},
+  journal = {Journal of Building Engineering},
+  volume  = {101},
+  pages   = {111909},
+  year    = {2025},
+  doi     = {10.1016/j.jobe.2025.111909},
+}
+
+@article{huang2024mpcoverlooked,
+  author  = {Huang, Sen and Huang, Bowen and Ma, Xu and Bhattacharya, Saptarshi and Bhattacharya, Arnab and Vrabie, Draguna and Lian, Jianming},
+  title   = {Unveiling overlooked aspects of model predictive control for building air conditioning systems},
+  journal = {Journal of Building Performance Simulation},
+  volume  = {17},
+  number  = {4},
+  pages   = {510--525},
+  year    = {2024},
+  doi     = {10.1080/19401493.2024.2346831},
+}
+
+@article{sioshansi2009pjm,
+  author  = {Sioshansi, Ramteen and Denholm, Paul and Jenkin, Thomas and Weiss, Jurgen},
+  title   = {Estimating the value of electricity storage in {PJM}: Arbitrage and some welfare effects},
+  journal = {Energy Economics},
+  volume  = {31},
+  number  = {2},
+  pages   = {269--277},
+  year    = {2009},
+  doi     = {10.1016/j.eneco.2008.10.005},
+}
+
+@inproceedings{ikonen2023endeffect,
+  author    = {Ikonen, Teemu J. and Han, Dongho and Lee, Jay H. and Harjunkoski, Iiro},
+  title     = {End-effect mitigation in multi-period stochastic programming of energy storage operations},
+  booktitle = {33rd European Symposium on Computer Aided Process Engineering (ESCAPE-33)},
+  series    = {Computer Aided Chemical Engineering},
+  volume    = {52},
+  publisher = {Elsevier},
+  pages     = {3007--3012},
+  year      = {2023},
+  doi       = {10.1016/B978-0-443-15274-0.50479-0},
+}
+

@@ -1,0 +1,76 @@
+# Paper 001 benchmark package. Public-repo quality config.
+# Tool configs here are the single source of truth for lint/type/test behaviour;
+# the pre-commit hook and CI both read this file.
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+# gl_gym is a direct git reference (the simulator, pinned to v0.2.1); hatchling
+# refuses direct references in project.dependencies unless this is opt-in.
+allow-direct-references = true
+
+[project]
+name = "greenlight-bench"
+version = "1.0.0"                 # the frozen code of record for the paper
+description = "Physics-informed vs black-box control benchmark on GreenLight-Gym2: code and run records of the paper."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "AGPL-3.0-or-later" }   # inherits the simulator's copyleft; confirm at Phase 6
+dependencies = [
+  # Aligned with the GreenLight-Gym2 v0.2.1 pins so both install in one env.
+  "gymnasium==0.29.1",
+  "stable-baselines3==2.1.0",
+  "sb3_contrib==2.1.0",
+  "casadi==3.6.7",
+  "torch>=2.0.0",
+  "numpy<2.0",
+  "scipy>=1.16",
+  "pandas",
+  "matplotlib",
+  "statsmodels",                  # stats.py: mixed-effects / clustered season stats
+  "pyyaml>=6.0.2",
+  "gl_gym @ git+https://github.com/BartvLaatum/GreenLight-Gym2@v0.2.1",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "mypy", "pytest", "pytest-cov"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# pycodestyle, pyflakes, isort, bugbear, comprehensions, pyupgrade, pylint-subset.
+select = ["E", "F", "I", "B", "C4", "UP", "PL", "RUF"]
+ignore = ["PLR0913"]             # allow >5 args where the harness needs it
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["PLR2004"]         # explicit expected values in asserts are the point of a test
+"greenlight_bench/envs/glg2.py" = ["PLC0415"]  # gl_gym is imported lazily (optional dependency)
+"greenlight_bench/data/fetch.py" = ["PLC0415"]  # entsoe is imported lazily (optional dependency)
+"examples/**" = ["PLC0415"]  # examples import gl_gym locally (optional dependency)
+"greenlight_bench/controllers/mpc.py" = ["PLC0415", "PLR0915"]  # lazy imports; the OCP builder is one long method
+"greenlight_bench/models/outputs.py" = ["PLC0415"]  # casadi imported lazily (heavy, keeps package import cheap)
+"greenlight_bench/controllers/rule_based.py" = ["PLC0415"]  # gl_gym imported lazily (optional dependency)
+"greenlight_bench/controllers/rl_mpc.py" = ["PLC0415"]  # stable-baselines3 imported lazily (optional)
+
+[tool.mypy]
+python_version = "3.12"          # analysis target; runtime supports >=3.11 (numpy stubs need 3.12 parsing)
+warn_unused_ignores = true
+warn_redundant_casts = true
+disallow_untyped_defs = true     # public API is typed
+ignore_missing_imports = true    # third-party sim/ML libs lack stubs
+
+[tool.pytest.ini_options]
+addopts = "-q --cov=greenlight_bench --cov-report=term-missing"
+testpaths = ["tests"]
+markers = [
+  "slow: multi-minute tests (real training steps); deselect with -m 'not slow'",
+]
+
+[tool.coverage.report]
+# The load-bearing math (gate, degree-hours, hypervolume, estimators) must be covered.
+fail_under = 90
+show_missing = true

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="600" viewBox="0 0 920 600" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#444"/>
+    </marker>
+  </defs>
+  <style>
+    .box { rx: 7; stroke-width: 1.6; }
+    .t   { font-size: 13px; fill: #222; }
+    .h   { font-size: 14.5px; font-weight: bold; fill: #111; }
+    .s   { font-size: 11px; fill: #555; }
+    .flow { stroke: #444; stroke-width: 1.5; fill: none; marker-end: url(#arr2); }
+  </style>
+
+  <text x="460" y="26" text-anchor="middle" font-size="19" font-weight="bold" fill="#111">Controller architectures: where physics enters, and how strongly</text>
+
+  <!-- column 1: rule-based -->
+  <rect x="20" y="52" width="200" height="64" class="box" fill="#ececec" stroke="#6c6c6c"/>
+  <text x="120" y="76" text-anchor="middle" class="h">1. Rule-based</text>
+  <text x="120" y="96" text-anchor="middle" class="s">physics: none; deployed practice</text>
+  <rect x="20" y="150" width="200" height="88" class="box" fill="#fff" stroke="#6c6c6c"/>
+  <text x="120" y="176" text-anchor="middle" class="t">setpoint schedules +</text>
+  <text x="120" y="194" text-anchor="middle" class="t">climate heuristics</text>
+  <text x="120" y="216" text-anchor="middle" class="s">(GLG2's shipped controller)</text>
+  <line x1="120" y1="238" x2="120" y2="470" class="flow"/>
+  <text x="132" y="350" class="s">absolute u</text>
+
+  <!-- column 2: PPO -->
+  <rect x="248" y="52" width="200" height="64" class="box" fill="#dbe9f7" stroke="#1f77b4"/>
+  <text x="348" y="76" text-anchor="middle" class="h">2. Black-box RL</text>
+  <text x="348" y="96" text-anchor="middle" class="s">physics: none; learns from data</text>
+  <rect x="248" y="150" width="200" height="56" class="box" fill="#fff" stroke="#1f77b4"/>
+  <text x="348" y="172" text-anchor="middle" class="t">observation normalizer</text>
+  <text x="348" y="190" text-anchor="middle" class="s">(stats shipped with the policy)</text>
+  <rect x="248" y="226" width="200" height="56" class="box" fill="#fff" stroke="#1f77b4"/>
+  <text x="348" y="248" text-anchor="middle" class="t">PPO policy &#960;(o)</text>
+  <text x="348" y="266" text-anchor="middle" class="s">trained 50k&#8211;2M steps, 5 seeds</text>
+  <line x1="348" y1="206" x2="348" y2="226" class="flow"/>
+  <line x1="348" y1="282" x2="348" y2="470" class="flow"/>
+  <text x="360" y="370" class="s">incremental &#916;u</text>
+
+  <!-- column 3: physics MPC -->
+  <rect x="476" y="52" width="200" height="64" class="box" fill="#dcefdc" stroke="#2ca02c"/>
+  <text x="576" y="76" text-anchor="middle" class="h">3. Economic NMPC</text>
+  <text x="576" y="96" text-anchor="middle" class="s">physics: hard (model = constraints)</text>
+  <rect x="476" y="150" width="200" height="56" class="box" fill="#fff" stroke="#2ca02c"/>
+  <text x="576" y="172" text-anchor="middle" class="t">nominal model &#952;&#771;</text>
+  <text x="576" y="190" text-anchor="middle" class="s">perturbed parameters, never true &#952;</text>
+  <rect x="476" y="226" width="200" height="76" class="box" fill="#fff" stroke="#2ca02c"/>
+  <text x="576" y="248" text-anchor="middle" class="t">direct collocation (Radau-2)</text>
+  <text x="576" y="266" text-anchor="middle" class="t">IPOPT, economic objective</text>
+  <text x="576" y="288" text-anchor="middle" class="s">revenue &#8722; costs &#8722; soft penalties</text>
+  <line x1="576" y1="206" x2="576" y2="226" class="flow"/>
+  <line x1="576" y1="302" x2="576" y2="470" class="flow"/>
+  <text x="588" y="380" class="s">absolute u; solver reliability tracked</text>
+
+  <!-- column 4: RL-in-MPC -->
+  <rect x="704" y="52" width="200" height="64" class="box" fill="#f7dcdc" stroke="#d62728"/>
+  <text x="804" y="76" text-anchor="middle" class="h">4. RL-in-MPC</text>
+  <text x="804" y="96" text-anchor="middle" class="s">physics + learning (van Laatum)</text>
+  <rect x="704" y="140" width="200" height="52" class="box" fill="#fff" stroke="#1f77b4"/>
+  <text x="804" y="160" text-anchor="middle" class="t">PPO rollout on state copy</text>
+  <text x="804" y="178" text-anchor="middle" class="s">horizon controls + terminal state</text>
+  <rect x="704" y="208" width="200" height="52" class="box" fill="#fff" stroke="#2ca02c"/>
+  <text x="804" y="228" text-anchor="middle" class="t">NMPC + L1 terminal cost</text>
+  <text x="804" y="246" text-anchor="middle" class="s">+ state warm-start from rollout</text>
+  <rect x="704" y="276" width="200" height="52" class="box" fill="#fff" stroke="#d62728"/>
+  <text x="804" y="296" text-anchor="middle" class="t">trajectory selection</text>
+  <text x="804" y="314" text-anchor="middle" class="s">apply the better plan's first u</text>
+  <line x1="804" y1="192" x2="804" y2="208" class="flow"/>
+  <line x1="804" y1="260" x2="804" y2="276" class="flow"/>
+  <line x1="804" y1="328" x2="804" y2="470" class="flow"/>
+  <text x="816" y="400" class="s">absolute u</text>
+
+  <!-- plant -->
+  <rect x="20" y="470" width="884" height="74" class="box" fill="#eef7ee" stroke="#2ca02c"/>
+  <text x="462" y="496" text-anchor="middle" class="h">GreenLight-Gym2 plant: true parameters &#952;, deterministic</text>
+  <text x="462" y="518" text-anchor="middle" class="t">one harness dispatches absolute vs incremental controls; identical seasons, weather, and scoring for every arm</text>
+  <text x="462" y="536" text-anchor="middle" class="s">model boundary: controllers see &#952;&#771; only; the mismatch axis perturbs &#952;&#771;, never the plant</text>
+  <text x="898" y="592" text-anchor="end" font-size="9.5" fill="#8a8a8a">growmatics-research 001 &#183; GreenLight-Gym2 v0.2.1 &#183; every number traces to a committed run record</text>
+</svg>

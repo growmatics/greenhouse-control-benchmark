@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this benchmark or its run records, please cite the paper below."
+title: "How Much Does Physics Buy You? A Physics-Informed vs Black-Box Benchmark for Greenhouse Climate Control"
+type: software
+authors:
+  - family-names: "Davarynejad"
+    given-names: "Mohsen"
+    orcid: "https://orcid.org/0000-0002-5376-3680"
+    affiliation: "Growmatics B.V.; Breda University of Applied Sciences"
+repository-code: "https://github.com/growmatics/greenhouse-control-benchmark"
+license: AGPL-3.0-or-later
+version: 1.0.0
+date-released: "2026-10-11"
+keywords:
+  - greenhouse climate control
+  - benchmark
+  - model predictive control
+  - reinforcement learning
+  - physics-informed control
+  - data efficiency
+abstract: >-
+  Benchmark code, committed run records and the analysis pipeline for a controlled comparison
+  of rule-based, black-box reinforcement learning (PPO, SAC), physics-only economic NMPC and
+  physics-informed RL-in-MPC control on the GreenLight-Gym2 greenhouse simulator: four held-out
+  weather years, a six-level controller-model mismatch ladder, five seeds, 284 seasons. Every
+  number in the paper regenerates from the committed anchor record. All results are simulated.
+preferred-citation:
+  type: article
+  title: "How Much Does Physics Buy You? A Physics-Informed vs Black-Box Benchmark for Greenhouse Climate Control"
+  authors:
+    - family-names: "Davarynejad"
+      given-names: "Mohsen"
+  year: 2026
+  notes: "arXiv preprint; identifier to be added on announcement"
+references:
+  - type: software
+    title: "GreenLight-Gym2"
+    authors:
+      - family-names: "van Laatum"
+        given-names: "Bart"
+    repository-code: "https://github.com/BartvLaatum/GreenLight-Gym2"
+    version: "0.2.1"
+    license: AGPL-3.0
+  - type: software
+    title: "Phytotron"
+    authors:
+      - name: "Growmatics B.V."
+    repository-code: "https://github.com/growmatics/phytotron"
+    version: "0.1.0"

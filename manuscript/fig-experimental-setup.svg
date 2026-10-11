@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#444"/>
+    </marker>
+  </defs>
+  <style>
+    .box { rx: 8; stroke-width: 1.6; }
+    .t   { font-size: 13px; fill: #222; }
+    .h   { font-size: 15px; font-weight: bold; fill: #111; }
+    .s   { font-size: 11px; fill: #555; }
+    .flow { stroke: #444; stroke-width: 1.6; fill: none; marker-end: url(#arr); }
+  </style>
+
+  <text x="470" y="28" text-anchor="middle" font-size="19" font-weight="bold" fill="#111">Benchmark design: five controllers, one deterministic testbed</text>
+
+  <!-- ===== Left: training phase ===== -->
+  <rect x="24" y="60" width="252" height="150" class="box" fill="#eaf1fb" stroke="#1f77b4"/>
+  <text x="150" y="84" text-anchor="middle" class="h">Step 1: policy training</text>
+  <text x="150" y="108" text-anchor="middle" class="t">training weather 2014&#8211;2021</text>
+  <text x="150" y="130" text-anchor="middle" class="t">PPO, 5 seeds, reference recipe</text>
+  <text x="150" y="152" text-anchor="middle" class="t">checkpoints at 6 budgets,</text>
+  <text x="150" y="174" text-anchor="middle" class="t">50k to 2M environment steps</text>
+  <text x="150" y="196" text-anchor="middle" class="s">arms 1 and 3 require no training</text>
+
+  <!-- ===== Center: the five arms ===== -->
+  <rect x="316" y="60" width="300" height="180" class="box" fill="#fbfbfb" stroke="#888"/>
+  <text x="466" y="84" text-anchor="middle" class="h">Controller arms</text>
+  <rect x="330" y="96"  width="272" height="28" rx="5" fill="#ececec" stroke="#6c6c6c"/>
+  <text x="466" y="115" text-anchor="middle" class="t">1. rule-based incumbent (no model)</text>
+  <rect x="330" y="130" width="272" height="28" rx="5" fill="#dbe9f7" stroke="#1f77b4"/>
+  <text x="466" y="149" text-anchor="middle" class="t">2. black-box RL (PPO)</text>
+  <rect x="330" y="164" width="272" height="28" rx="5" fill="#dcefdc" stroke="#2ca02c"/>
+  <text x="466" y="183" text-anchor="middle" class="t">3. economic NMPC (physics only)</text>
+  <rect x="330" y="198" width="272" height="28" rx="5" fill="#f7dcdc" stroke="#d62728"/>
+  <text x="466" y="217" text-anchor="middle" class="t">4. RL-in-MPC (physics-informed)</text>
+
+  <!-- ===== Right: evaluation grid ===== -->
+  <rect x="662" y="60" width="254" height="180" class="box" fill="#fdf6e9" stroke="#c8a03c"/>
+  <text x="789" y="84" text-anchor="middle" class="h">Step 2: evaluation grid</text>
+  <text x="789" y="108" text-anchor="middle" class="t">held-out weather 2022&#8211;2025,</text>
+  <text x="789" y="130" text-anchor="middle" class="t">model mismatch 0 / 5 / 10%,</text>
+  <text x="789" y="152" text-anchor="middle" class="t">5 seeds, 60-day seasons</text>
+  <text x="789" y="178" text-anchor="middle" class="t" font-weight="bold">284 independent seasons</text>
+  <text x="789" y="200" text-anchor="middle" class="s">per-arm axes: 4 + 20 + 60 + 60;</text>
+  <text x="789" y="218" text-anchor="middle" class="s">mismatch applies to arms 3 and 4</text>
+
+  <!-- ===== Plant ===== -->
+  <rect x="301" y="300" width="330" height="108" class="box" fill="#eef7ee" stroke="#2ca02c"/>
+  <text x="466" y="326" text-anchor="middle" class="h">GreenLight-Gym2, tomato</text>
+  <text x="466" y="350" text-anchor="middle" class="t">28-state greenhouse ODE, 15-minute steps</text>
+  <text x="466" y="372" text-anchor="middle" class="t">deterministic plant, true parameters &#952;</text>
+  <text x="466" y="394" text-anchor="middle" class="s">controllers receive a perturbed nominal &#952;&#771; only</text>
+
+  <!-- ===== Metrics ===== -->
+  <rect x="662" y="300" width="254" height="172" class="box" fill="#f3eefb" stroke="#7d5aa6"/>
+  <text x="789" y="324" text-anchor="middle" class="h">Season-level scoring</text>
+  <text x="789" y="348" text-anchor="middle" class="t">net economic value [EUR/m&#178;]</text>
+  <text x="789" y="370" text-anchor="middle" class="t">humidity feasibility gate</text>
+  <text x="789" y="388" text-anchor="middle" class="s">Clopper&#8211;Pearson; crash counts</text>
+  <text x="789" y="410" text-anchor="middle" class="t">online cost [ms/step]</text>
+  <text x="789" y="432" text-anchor="middle" class="t">solver reliability (arms 3, 4)</text>
+  <text x="789" y="456" text-anchor="middle" class="s">gate before ranking</text>
+
+  <!-- ===== Bottom band: provenance ===== -->
+  <rect x="24" y="438" width="607" height="72" class="box" fill="#f7f7f7" stroke="#999"/>
+  <text x="327" y="462" text-anchor="middle" class="h">Reproducibility</text>
+  <text x="327" y="484" text-anchor="middle" class="t">seeded end to end; repeat runs bit-identical within platform</text>
+  <text x="327" y="502" text-anchor="middle" class="s">each result carries its run record: commit, hardware, grid, failures</text>
+
+  <!-- flows -->
+  <line x1="276" y1="135" x2="316" y2="135" class="flow"/>
+  <line x1="616" y1="150" x2="662" y2="150" class="flow"/>
+  <line x1="466" y1="240" x2="466" y2="300" class="flow"/>
+  <line x1="789" y1="240" x2="789" y2="300" class="flow"/>
+  <line x1="631" y1="354" x2="662" y2="354" class="flow"/>
+  <line x1="327" y1="408" x2="327" y2="438" class="flow"/>
+
+  <!-- provenance footer: the series signature -->
+  <text x="916" y="548" text-anchor="end" font-size="9.5" fill="#8a8a8a">growmatics-research 001 &#183; GreenLight-Gym2 v0.2.1 &#183; every number traces to a committed run record</text>
+</svg>
