@@ -196,7 +196,7 @@ def _run_task_safe(task: dict[str, Any]) -> dict[str, Any]:
 
 def _banded_violation(trace: np.ndarray, step_hours: float, depth: float, min_hours: float) -> bool:
     """True if the exceedance trace stays above ``depth`` for more than ``min_hours``
-    CONSECUTIVE hours (the secondary banded gate, the decision record of 2026-07-16)."""
+    CONSECUTIVE hours (the secondary banded gate, decision 2026-07-16)."""
     over = trace > depth
     run = best = 0
     for flag in over:
@@ -267,7 +267,7 @@ def _run_all(
     tasks: list[dict[str, Any]], workers: int, progress_path: Path, trace_dir: Path | None = None
 ) -> list[dict[str, Any]]:
     """Run every season, streaming each completion to an append-only progress file
-    (live progress via ``wc -l``, crash-resumability; decision of 2026-07-16).
+    (live progress via ``wc -l``, crash-resumability; decision 2026-07-16).
 
     If ``trace_dir`` is set, each season's full per-class exceedance arrays are also
     written there (one JSON per season) so the banded/degree-hours gate can be

@@ -5,7 +5,7 @@
 # it must contain NO hardcoded magic numbers for anything defined here. Prose
 # (experiments/setup.md, method/design.md, the manuscript) states these values
 # once and points here as canonical. If a value changes, it changes HERE, and
-# the change is logged in the project decision record. The conformance checks cover
+# the change is logged in the decision log. The conformance checks cover
 # prose against this file.
 # ============================================================================
 
@@ -48,7 +48,7 @@ gate:                       # season-level feasibility gate (contract rows 7, 7b
   hard_classes: zero_tolerance
   evaluated_at: design_mismatch_level   # not the nominal model
   degree_hours: magnitude_times_duration   # C.h, %.h, ppm.h; reported per class, not a threshold
-  # SECONDARY banded gate (decision of 2026-07-16): the pre-registered
+  # SECONDARY banded gate (decision 2026-07-16): the pre-registered
   # any-step gate above stays primary and saturated (a finding); a season additionally counts
   # as banded-violating only if a class exceeds its bound by more than `depth` for longer than
   # `min_hours` CONSECUTIVE hours (grounded in the reference MPC's own 2-point RH margin and

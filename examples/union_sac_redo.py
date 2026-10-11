@@ -1,6 +1,6 @@
 """Build the R1 anchor benchmark by unioning the main grid run with the SAC-arm redo.
 
-Why this exists (the decision record of 2026-07-23): the main R1 `run_benchmark` invocation ran the SAC
+Why this exists (decision 2026-07-23): the main R1 `run_benchmark` invocation ran the SAC
 arm (`black_box_sac`) with STALE seeds-0/1 checkpoints (a `cp -n` no-clobber staging slip), so
 its 20 SAC seasons are a mix of as-shipped and tuned and its arm mean is wrong (+2.56 vs the true
 +3.21). The fix (option A) re-ran ONLY the SAC arm with the corrected checkpoints. This script
@@ -75,7 +75,7 @@ def main() -> None:
     rec["git_dirty"] = True
     rec["union_note"] = (
         f"R1 anchor: non-SAC seasons from main run {rec.get('git_commit')}; "
-        f"{ARM} 20 seasons from the SAC-arm redo (corrected checkpoints, the decision record of 2026-07-23)."
+        f"{ARM} 20 seasons from the SAC-arm redo (corrected checkpoints, decision 2026-07-23)."
     )
 
     Path(args.out).write_text(json.dumps(main_blob, indent=2, default=float))

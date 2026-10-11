@@ -31,7 +31,7 @@ The R1 re-anchor run: 5 arms incl. tuned SAC, the finer 6-level mismatch ladder.
 
 ## 5. Failures and anomalies
 - **0 failed seasons** in the main run (`n_failed_seasons=0`).
-- **SAC-arm staging bug (found + fixed, the decision record of 2026-07-24).** The tuned-winner checkpoints were
+- **SAC-arm staging bug (found + fixed, decision 2026-07-24).** The tuned-winner checkpoints were
   staged into the flat `checkpoints/` dir with `cp -n`, which silently kept the 2026-07-17 as-shipped
   `sac_s{0,1}` files; the main run's SAC arm was therefore a mix (bogus arm mean +2.56). Caught mid-run
   by comparing the live per-arm interim mean to the confirmation. Fixed by overwriting seeds 0--1 with

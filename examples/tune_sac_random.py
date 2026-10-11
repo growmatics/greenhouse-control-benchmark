@@ -4,7 +4,7 @@ Mirrors the procedure the GreenLight-Gym paper used for PPO (a random search;
 van Laatum et al. 2024, arXiv 2410.05336, Sec 3.3.3), applied to SAC, which the
 paper does not tune. Pre-registered and SEALED in
 ``experiments/expectations-r2-sac-tuning.md`` (tag ``prereg-r2-2026-07-17``,
-content SHA-256 recorded in the run records).
+content SHA-256 recorded in the decision log).
 
 Method note (recorded in the outcomes file, not a deviation from the science):
 the paper ran its random search on the Weights & Biases platform; we run the
@@ -74,7 +74,7 @@ _SEARCH_SPACE: dict[str, tuple[str, Any]] = {
     "tau": ("loguniform", (0.005, 0.02)),
 }
 
-# --- AMENDMENT 2026-07-18/19 (recorded in outcomes-r2-sac-tuning.md and the project decision record;
+# --- AMENDMENT 2026-07-18/19 (recorded in outcomes-r2-sac-tuning.md and the decision log;
 #     the sealed constants above are untouched). Three trials are EXCLUDED for
 #     feasibility -- all >= 2M gradient updates / > 1 day wall clock, which exceeds
 #     the WSL box's observed mean time between OOM reboots, so they cannot finish and

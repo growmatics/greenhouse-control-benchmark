@@ -8,7 +8,7 @@ runs are already distilled into per-season JSON records.
 
 `results/benchmark/benchmark_r1-union.json` — the R1 anchor, 284 per-season rows, 5 arms,
 6-level mismatch ladder. Built by `union_sac_redo.py` from the main grid run plus the SAC-arm redo
-(see the R1 run report in results/benchmark/). Its `seasons` list is the raw audit trail; every script
+(see the R1 run report). Its `seasons` list is the raw audit trail; every script
 below recomputes from it.
 
 The anchor's run record carries `git_dirty: true`: the union was assembled from the main grid run and
