@@ -6,7 +6,7 @@ authors:
   - family-names: "Davarynejad"
     given-names: "Mohsen"
     orcid: "https://orcid.org/0000-0002-5376-3680"
-    affiliation: "Growmatics B.V.; Breda University of Applied Sciences"
+    affiliation: "Growmatics B.V., Delft, The Netherlands; Breda University of Applied Sciences, Breda, The Netherlands"
 repository-code: "https://github.com/growmatics/greenhouse-control-benchmark"
 license: AGPL-3.0-or-later
 version: 1.0.0
